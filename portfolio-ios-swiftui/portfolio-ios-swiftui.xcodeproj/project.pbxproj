@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
 		ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1C283B78F800F890BC /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = portfolio_ios_swiftuiApp.swift; sourceTree = "<group>"; };
 		ABAF1D1A283B78F100F890BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		ABAF1D0C283B78F100F890BC = {
 			isa = PBXGroup;
 			children = (
+				ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */,
 				ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */,
 				ABAF1D16283B78F100F890BC /* Products */,
 			);
@@ -51,6 +54,10 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				ABB3AD30284DEA84004C012E /* View */,
+				ABB3AD2E284DEA5B004C012E /* Store */,
+				ABB3AD2C284DEA29004C012E /* Dispatcher */,
+				ABB3AD2A284DEA02004C012E /* Actions */,
 				ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
 				ABAF1D1C283B78F800F890BC /* Assets.xcassets */,
@@ -67,6 +74,66 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		ABB3AD2A284DEA02004C012E /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				ABB3AD2B284DEA18004C012E /* ActionCreators */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		ABB3AD2B284DEA18004C012E /* ActionCreators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ActionCreators;
+			sourceTree = "<group>";
+		};
+		ABB3AD2C284DEA29004C012E /* Dispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				ABB3AD2D284DEA43004C012E /* NotificationCenter */,
+			);
+			path = Dispatcher;
+			sourceTree = "<group>";
+		};
+		ABB3AD2D284DEA43004C012E /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		ABB3AD2E284DEA5B004C012E /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				ABB3AD2F284DEA66004C012E /* KeyValueObserving */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		ABB3AD2F284DEA66004C012E /* KeyValueObserving */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = KeyValueObserving;
+			sourceTree = "<group>";
+		};
+		ABB3AD30284DEA84004C012E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ABB3AD31284DEA90004C012E /* UserIntaraction */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ABB3AD31284DEA90004C012E /* UserIntaraction */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserIntaraction;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +144,7 @@
 				ABAF1D11283B78F100F890BC /* Sources */,
 				ABAF1D12283B78F100F890BC /* Frameworks */,
 				ABAF1D13283B78F100F890BC /* Resources */,
+				ABAE5BE928604B2A008ED665 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,12 +193,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */,
 				ABAF1D20283B78F800F890BC /* Preview Assets.xcassets in Resources */,
 				ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABAE5BE928604B2A008ED665 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format # 自動修正の有効化\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ABAF1D11283B78F100F890BC /* Sources */ = {
