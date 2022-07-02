@@ -4,18 +4,33 @@
 //
 //  Created by まっすー on 2022/06/27.
 //
-
 import SwiftUI
 
 struct ButtonView: View {
     let label: String
-    let color: Int
+    // let color: Int
+
+    enum ColorPattern: String {
+        case nomal = "nomal"
+        case invite = "invite"
+        case new = "new"
+        case wip = "wip"
+    }
+
+    let colorPattern: ColorPattern.RawValue
+
+    let gradientView = LinearGradient(
+        gradient: Gradient(colors: [Color(red: 255 / 255, green: 144 / 255, blue: 179 / 255),
+                                    Color(red: 255 / 255, green: 194 / 255, blue: 226 / 255)]),
+        startPoint: .top,
+        endPoint: .bottom)
 
     var body: some View {
 
-        var widthSize = getWidthSize(text: label)
-        switch color {
-        case 0:
+        let widthSize = getWidthSize(text: label)
+
+        switch colorPattern {
+        case ColorPattern.nomal.rawValue:
             Button(action: {
                 print("押した")
             }) {
@@ -23,10 +38,23 @@ struct ButtonView: View {
                     .font(.system(size: 20))
                     .frame(width: widthSize, height: 50)
                     .foregroundColor(Color.white)
-                    .background(Color(red: 253 / 255, green: 179 / 255, blue: 202 / 255))
+                    .background(gradientView)
                     .cornerRadius(25)
             }
-        case 1:
+        case ColorPattern.invite.rawValue:
+            Button(action: {
+                print("押した")
+            }) {
+                Text(label)
+                    .font(.system(size: 20))
+                    .frame(width: widthSize, height: 50)
+                    .foregroundColor(Color(red: 255 / 255, green: 144 / 255, blue: 179 / 255))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 25)
+                            .stroke(Color(red: 255 / 255, green: 144 / 255, blue: 179 / 255), lineWidth: 2)
+                    )
+            }
+        case ColorPattern.new.rawValue:
             Button(action: {
                 print("押した")
             }) {
@@ -62,9 +90,11 @@ func getWidthSize(text: String) -> CGFloat {
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(label: "投稿", color: 0)
-        ButtonView(label: "登録", color: 1)
-        ButtonView(label: "下書き", color: 2)
-        ButtonView(label: "新規会員登録", color: 1)
+        VStack(spacing: 30) {
+            ButtonView(label: "保存", colorPattern: "nomal")
+            ButtonView(label: "招待", colorPattern: "invite")
+            ButtonView(label: "下書き", colorPattern: "wip")
+            ButtonView(label: "新規会員登録", colorPattern: "new")
+        }
     }
 }
