@@ -7,14 +7,13 @@
 import SwiftUI
 
 struct ButtonView: View {
-    let label: String
-    // let color: Int
+    @State var label: String
 
-    enum ColorPattern: String {
-        case nomal = "nomal"
-        case invite = "invite"
-        case new = "new"
-        case wip = "wip"
+    enum ColorPattern: Int {
+        case normal = 0
+        case invite = 1
+        case new = 2
+        case wip = 3
     }
 
     let colorPattern: ColorPattern.RawValue
@@ -26,26 +25,30 @@ struct ButtonView: View {
         endPoint: .bottom)
 
     var body: some View {
+        let words = limit(text: label)
 
-        let widthSize = getWidthSize(text: label)
+        let widthSize = getWidthSize(text: words)
 
         switch colorPattern {
-        case ColorPattern.nomal.rawValue:
+        case ColorPattern.normal.rawValue:
             Button(action: {
                 print("押した")
             }) {
-                Text(label)
+                Text(words)
                     .font(.system(size: 20))
-                    .frame(width: widthSize, height: 50)
                     .foregroundColor(Color.white)
-                    .background(gradientView)
-                    .cornerRadius(25)
+                    .lineLimit(1)
             }
+            .frame(width: widthSize, height: 50)
+            .background(gradientView)
+            .cornerRadius(25)
+            .padding(.horizontal, 30)
+
         case ColorPattern.invite.rawValue:
             Button(action: {
                 print("押した")
             }) {
-                Text(label)
+                Text(words)
                     .font(.system(size: 20))
                     .frame(width: widthSize, height: 50)
                     .foregroundColor(Color(red: 255 / 255, green: 144 / 255, blue: 179 / 255))
@@ -53,48 +56,59 @@ struct ButtonView: View {
                         RoundedRectangle(cornerRadius: 25)
                             .stroke(Color(red: 255 / 255, green: 144 / 255, blue: 179 / 255), lineWidth: 2)
                     )
+                    .lineLimit(1)
             }
         case ColorPattern.new.rawValue:
             Button(action: {
                 print("押した")
             }) {
-                Text(label)
+                Text(words)
                     .font(.system(size: 20))
                     .frame(width: widthSize, height: 50)
                     .foregroundColor(Color(red: 112 / 255, green: 127 / 255, blue: 137 / 255))
                     .background(Color(red: 229 / 255, green: 229 / 255, blue: 229 / 255))
                     .cornerRadius(25)
+                    .lineLimit(1)
             }
         default:
             Button(action: {
                 print("押した")
             }) {
-                Text(label)
+                Text(words)
                     .font(.system(size: 20))
                     .foregroundColor(Color(red: 255 / 255, green: 144 / 255, blue: 179 / 255))
+                    .lineLimit(1)
             }
         }
     }
 }
 
 func getWidthSize(text: String) -> CGFloat {
+
     let textCount = text.count
     var widthSize: CGFloat
     if textCount > 5 {
-        widthSize = 170
+        widthSize = 190
     } else {
         widthSize = 100
     }
+    // 日本語7文字以上は改行になる, エラーハンドリング
     return widthSize
+}
+
+func limit(text: String) -> String {
+    var word = text
+    word = String(word.prefix(7))
+    return word
 }
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
         VStack(spacing: 30) {
-            ButtonView(label: "保存", colorPattern: "nomal")
-            ButtonView(label: "招待", colorPattern: "invite")
-            ButtonView(label: "下書き", colorPattern: "wip")
-            ButtonView(label: "新規会員登録", colorPattern: "new")
+            ButtonView(label: "保存保存保存保存保", colorPattern: 0)
+            ButtonView(label: "招待", colorPattern: 1)
+            ButtonView(label: "下書き", colorPattern: 3)
+            ButtonView(label: "新規会員登録", colorPattern: 2)
         }
     }
 }
