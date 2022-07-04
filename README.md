@@ -1,2 +1,5 @@
 # Funcy_Portfolio_iOS_for_SwiftUI
 Funcyポートフォリオの開発環境SwiftUI版リポジトリです
+
+AtomButton？を共通化させるコード書いてみたんですけど、遊びでやったので割と雑です。
+必要無くなったらこのブランチ消してください。
