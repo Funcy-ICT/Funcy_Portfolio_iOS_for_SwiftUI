@@ -9,39 +9,34 @@ import SwiftUI
 
 struct TextView: View {
 
-    enum TextPattern: Int {
-        case normal = 0
-        case bold = 1
-        case title = 2
+    enum TextPattern {
+        case normal
+        case bold
+        case title
     }
 
     let text: String
-    let textPattern: TextPattern.RawValue
+    let textPattern: TextPattern
 
     var body: some View {
         switch textPattern {
         //ベーシックフォント
-        case TextPattern.normal.rawValue:
+        case TextPattern.normal:
             Text(text)
                 .font(.headline)
                 .fontWeight(.light)
             
         //ボールドフォント
-        case TextPattern.bold.rawValue:
+        case TextPattern.bold:
             Text(text)
                 .font(.headline)
                 .fontWeight(.bold)
 
         //タイトルフォント
-        case TextPattern.title.rawValue:
+        case TextPattern.title:
             Text(text)
                 .font(.title)
                 .fontWeight(.bold)
-
-        default:
-            Text(text)
-                .font(.headline)
-                .fontWeight(.light)
         }
     }
 }
