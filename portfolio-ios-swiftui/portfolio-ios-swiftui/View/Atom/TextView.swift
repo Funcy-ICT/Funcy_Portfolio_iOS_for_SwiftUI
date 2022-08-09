@@ -4,27 +4,35 @@
 //
 //  Created by 鳥山英峻 on 2022/06/27.
 //
-
 import SwiftUI
 
 struct TextView: View {
 
+    enum TextPattern: Int {
+        case normal = 0
+        case bold = 1
+        case title = 2
+    }
+
     let text: String
-    let pattern: Int
+    let textPattern: TextPattern.RawValue
 
     var body: some View {
-        switch pattern {
-        case 0:
+        switch textPattern {
+        // ベーシックフォント
+        case TextPattern.normal.rawValue:
             Text(text)
                 .font(.headline)
                 .fontWeight(.light)
 
-        case 1:
+        // ボールドフォント
+        case TextPattern.bold.rawValue:
             Text(text)
                 .font(.headline)
                 .fontWeight(.bold)
 
-        case 2:
+        // タイトルフォント
+        case TextPattern.title.rawValue:
             Text(text)
                 .font(.title)
                 .fontWeight(.bold)
@@ -37,14 +45,15 @@ struct TextView: View {
     }
 }
 
-#if DEBUG
-struct TextView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack(spacing: 20) {
-            TextView(text: "こんにちわ", pattern: 0)
-            TextView(text: "こんにちわ", pattern: 1)
-            TextView(text: "こんにちわ", pattern: 2)
-        }
-    }
-}
-#endif
+// #if DEBUG
+// struct TextView_Previews: PreviewProvider {
+//    static var previews: some View {
+//
+//        VStack(spacing: 20) {
+//            TextView(text: "こんにちわ", textPattern: 0)
+//            TextView(text: "こんにちわ", textPattern: 1)
+//            TextView(text: "こんにちわ", textPattern: 2)
+//        }
+//    }
+// }
+// #endif
