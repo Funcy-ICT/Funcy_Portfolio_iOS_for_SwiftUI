@@ -4,7 +4,6 @@
 //
 //  Created by 鳥山英峻 on 2022/06/27.
 //
-
 import SwiftUI
 
 struct TextView: View {
@@ -25,7 +24,7 @@ struct TextView: View {
             Text(text)
                 .font(.headline)
                 .fontWeight(.light)
-            
+
         //ボールドフォント
         case TextPattern.bold.rawValue:
             Text(text)
