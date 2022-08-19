@@ -11,16 +11,16 @@ struct BaseButtonView: View {
     var labelText: String
     var foregroundColor: Color
     var backgroundColor: Color
-    var overlay: AnyView
     var radius: CGFloat
+    var lineColor: Color
 
-    init<V>(action: @escaping () -> Void, labelText: String, foregroundColor: Color, backgroundColor: Color, overlay: V? = nil, radius: CGFloat? = 0) where V: View {
+    init(action: @escaping () -> Void, labelText: String, foregroundColor: Color, backgroundColor: Color, radius: CGFloat? = 0, lineColor: Color? = Color.clear) {
         self.action = action
         self.labelText = labelText
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
-        self.overlay = AnyView(overlay)
         self.radius = radius ?? 0
+        self.lineColor = lineColor ?? Color.clear
     }
 
     private func getWidthSize(text: String) -> CGFloat {
@@ -55,7 +55,8 @@ struct BaseButtonView: View {
                 .background(backgroundColor)
                 .cornerRadius(radius)
                 .overlay(
-                    overlay
+                    // overlay
+                    RoundedRectangle(cornerRadius: radius).stroke(lineColor, lineWidth: 2)
                 )
         }
     }
@@ -68,19 +69,19 @@ struct CommonButtonView_Previews: PreviewProvider {
                 action: { print("何か処理をするよー") },
                 labelText: "新規会員登録",
                 foregroundColor: Color.white,
-                backgroundColor: Color.subPink, overlay: EmptyView(), radius: 25
+                backgroundColor: Color.subPink, radius: 25
             )
             BaseButtonView(
                 action: { print("何か処理をするよー") },
                 labelText: "保存",
                 foregroundColor: Color.textPinkColor,
-                backgroundColor: Color.clear, overlay: EmptyView(), radius: 25
+                backgroundColor: Color.clear, radius: 25, lineColor: Color.textPinkColor
             )
             BaseButtonView(
                 action: { print("何か処理をするよー") },
                 labelText: "hoge",
                 foregroundColor: Color.text,
-                backgroundColor: Color.grayBottonColor, overlay: EmptyView(), radius: 25
+                backgroundColor: Color.grayBottonColor, radius: 25
             )
 
         }
