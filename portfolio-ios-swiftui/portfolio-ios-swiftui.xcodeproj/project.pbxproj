@@ -61,9 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				ABB3AD30284DEA84004C012E /* View */,
-				ABB3AD2E284DEA5B004C012E /* Store */,
-				ABB3AD2C284DEA29004C012E /* Dispatcher */,
-				ABB3AD2A284DEA02004C012E /* Actions */,
 				ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
 				ABAF1D1C283B78F800F890BC /* Assets.xcassets */,
@@ -80,66 +77,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ABB3AD2A284DEA02004C012E /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				ABB3AD2B284DEA18004C012E /* ActionCreators */,
-			);
-			path = Actions;
-			sourceTree = "<group>";
-		};
-		ABB3AD2B284DEA18004C012E /* ActionCreators */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ActionCreators;
-			sourceTree = "<group>";
-		};
-		ABB3AD2C284DEA29004C012E /* Dispatcher */ = {
-			isa = PBXGroup;
-			children = (
-				ABB3AD2D284DEA43004C012E /* NotificationCenter */,
-			);
-			path = Dispatcher;
-			sourceTree = "<group>";
-		};
-		ABB3AD2D284DEA43004C012E /* NotificationCenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NotificationCenter;
-			sourceTree = "<group>";
-		};
-		ABB3AD2E284DEA5B004C012E /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				ABB3AD2F284DEA66004C012E /* KeyValueObserving */,
-			);
-			path = Store;
-			sourceTree = "<group>";
-		};
-		ABB3AD2F284DEA66004C012E /* KeyValueObserving */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = KeyValueObserving;
-			sourceTree = "<group>";
-		};
 		ABB3AD30284DEA84004C012E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				ABDA9519286994B600C7C735 /* Atom */,
-				ABB3AD31284DEA90004C012E /* UserIntaraction */,
 				FC06F9E8288E85110016E401 /* ColorExtension.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		ABB3AD31284DEA90004C012E /* UserIntaraction */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UserIntaraction;
 			sourceTree = "<group>";
 		};
 		ABDA9519286994B600C7C735 /* Atom */ = {
