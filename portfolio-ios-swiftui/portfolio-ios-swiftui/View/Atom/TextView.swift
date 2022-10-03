@@ -19,19 +19,19 @@ struct TextView: View {
 
     var body: some View {
         switch textPattern {
-        //ベーシックフォント
+        // ベーシックフォント
         case TextPattern.normal.rawValue:
             Text(text)
                 .font(.headline)
                 .fontWeight(.light)
 
-        //ボールドフォント
+        // ボールドフォント
         case TextPattern.bold.rawValue:
             Text(text)
                 .font(.headline)
                 .fontWeight(.bold)
 
-        //タイトルフォント
+        // タイトルフォント
         case TextPattern.title.rawValue:
             Text(text)
                 .font(.title)
@@ -45,8 +45,8 @@ struct TextView: View {
     }
 }
 
-//#if DEBUG
-//struct TextView_Previews: PreviewProvider {
+// #if DEBUG
+// struct TextView_Previews: PreviewProvider {
 //    static var previews: some View {
 //
 //        VStack(spacing: 20) {
@@ -55,5 +55,5 @@ struct TextView: View {
 //            TextView(text: "こんにちわ", textPattern: 2)
 //        }
 //    }
-//}
-//#endif
+// }
+// #endif
