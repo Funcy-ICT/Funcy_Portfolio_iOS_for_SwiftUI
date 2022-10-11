@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FabButtonView: View {
-    //上位ViewにNavigationLinkが必要です
+    //上位ViewにNavigationViewが必要です
     
     var buttonSize : CGFloat = 50 //ボタンの大きさ
     var buttonColor : Color = Color.fabColor //ボタンの色
@@ -18,14 +18,17 @@ struct FabButtonView: View {
     var body: some View {
 
         NavigationLink(destination:{
+    
             if isGroup {
                 testView2() //グループの新規投稿View
             } else {
                 testView1() //個人の新規投稿View
             }
-        }){
+            })
+        {
             
             ZStack{
+                
                 Circle()
                     .fill(buttonColor)
                     .frame(width: buttonSize, height: buttonSize)
@@ -35,6 +38,7 @@ struct FabButtonView: View {
                     .frame(width:buttonSize,height:buttonSize)
                     .foregroundColor(.white)
                     .font(.system(size: buttonSize*0.7))
+                
             }
         }
     }
@@ -44,8 +48,11 @@ struct FabButtonView: View {
 
 struct FabButtonView_Previews: PreviewProvider {
     static var previews: some View {
+        
         NavigationView{
+            
             VStack{
+                
             FabButtonView()
             FabButtonView(isGroup:true)
             FabButtonView(buttonSize: 30, buttonColor: Color.red, isGroup: true)
