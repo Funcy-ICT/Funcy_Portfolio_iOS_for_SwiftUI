@@ -6,12 +6,14 @@
 //
 import SwiftUI
 struct TextBox: View {
-    @State private var data = ""
+    @State private var inputText = ""
     let text: String
     var body: some View {
+
         VStack(alignment: .leading) {
-            Text(text).foregroundColor(Color.text)
-            TextField("入力してください", text: $data)
+            Text(text)
+                .foregroundColor(Color.text)
+            TextField("入力してください", text: $inputText)
                 .frame(width: 240, height: 40)
                 .padding(5)
                 .overlay(RoundedRectangle(cornerRadius: 20)
@@ -20,6 +22,7 @@ struct TextBox: View {
         }
     }
 }
+
 struct TextBox_Previews: PreviewProvider {
     static var previews: some View {
         TextBox(text: "メールアドレス")
