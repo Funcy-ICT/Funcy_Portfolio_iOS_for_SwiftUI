@@ -26,16 +26,16 @@ struct IconView: View {
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 120.0, height: 120.0)
-                .position(x: 80, y: 70)
+                .frame(width: 148.0, height: 148.0)
+                // 74 × 2 = 148.0
             
         case IconPattern.small.rawValue:
             Image(image)
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 100.0, height: 100.0)
-                .position(x: 70, y: 70)
+                .frame(width: 108.0, height: 108.0)
+                // 54 × 2 = 108.0
             
             
         default:
@@ -43,8 +43,7 @@ struct IconView: View {
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 120.0, height: 120.0)
-                .position(x: 80, y: 70)
+                .frame(width: 148.0, height: 148.0)
             
         }
     }
