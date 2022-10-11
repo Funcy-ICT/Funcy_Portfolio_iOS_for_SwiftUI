@@ -15,10 +15,11 @@ struct TextBox: View {
                 .foregroundColor(Color.text)
             TextField("入力してください", text: $inputText)
                 .frame(width: 240, height: 40)
-                .padding(5)
+                .padding(.leading, 15)
                 .overlay(RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.grayBottonColor, lineWidth: 2)
                 )
+                .padding(.leading, 25)
         }
     }
 }
