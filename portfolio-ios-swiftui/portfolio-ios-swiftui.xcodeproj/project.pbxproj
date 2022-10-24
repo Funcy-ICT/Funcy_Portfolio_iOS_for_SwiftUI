@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */; };
+		AB2D7713290611A10050F41A /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D7712290611A10050F41A /* LoginPage.swift */; };
+		AB2D771A29061C9F0050F41A /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D771929061C9F0050F41A /* Auth.swift */; };
+		AB2D771D29064E400050F41A /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D771C29064E400050F41A /* APIServiceError.swift */; };
+		AB2D771F290654890050F41A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D771E290654890050F41A /* LoginService.swift */; };
+		AB2D77212906587C0050F41A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2D77202906587C0050F41A /* User.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
@@ -20,6 +25,11 @@
 
 /* Begin PBXFileReference section */
 		0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		AB2D7712290611A10050F41A /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
+		AB2D771929061C9F0050F41A /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		AB2D771C29064E400050F41A /* APIServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		AB2D771E290654890050F41A /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		AB2D77202906587C0050F41A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = portfolio_ios_swiftuiApp.swift; sourceTree = "<group>"; };
@@ -42,6 +52,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB2D7714290612E00050F41A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D771B29064E1C0050F41A /* Service */,
+				AB2D7717290613C20050F41A /* ViewModel */,
+				AB2D7716290613B80050F41A /* Model */,
+				AB2D7712290611A10050F41A /* LoginPage.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AB2D7716290613B80050F41A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D771929061C9F0050F41A /* Auth.swift */,
+				AB2D77202906587C0050F41A /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB2D7717290613C20050F41A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AB2D771B29064E1C0050F41A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AB2D771C29064E400050F41A /* APIServiceError.swift */,
+				AB2D771E290654890050F41A /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		ABAF1D0C283B78F100F890BC = {
 			isa = PBXGroup;
 			children = (
@@ -62,7 +108,8 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
-				ABB3AD30284DEA84004C012E /* View */,
+				AB2D7714290612E00050F41A /* Login */,
+				ABB3AD30284DEA84004C012E /* CommonParts */,
 				ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
 				ABAF1D1C283B78F800F890BC /* Assets.xcassets */,
@@ -79,13 +126,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ABB3AD30284DEA84004C012E /* View */ = {
+		ABB3AD30284DEA84004C012E /* CommonParts */ = {
 			isa = PBXGroup;
 			children = (
 				ABDA9519286994B600C7C735 /* Atom */,
 				FC06F9E8288E85110016E401 /* ColorExtension.swift */,
 			);
-			path = View;
+			path = CommonParts;
 			sourceTree = "<group>";
 		};
 		ABDA9519286994B600C7C735 /* Atom */ = {
@@ -181,7 +228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format # 自動修正の有効化\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif test -d /opt/homebrew/bin; then\n    PATH=/opt/homebrew/bin/:$PATH\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format # 自動修正の有効化\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -194,8 +241,13 @@
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
+				AB2D771D29064E400050F41A /* APIServiceError.swift in Sources */,
+				AB2D771A29061C9F0050F41A /* Auth.swift in Sources */,
+				AB2D7713290611A10050F41A /* LoginPage.swift in Sources */,
+				AB2D771F290654890050F41A /* LoginService.swift in Sources */,
 				ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */,
 				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
+				AB2D77212906587C0050F41A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
