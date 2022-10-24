@@ -7,39 +7,39 @@
 
 import SwiftUI
 
+
+enum IconPattern {
+    case large
+    case small
+}
+
 struct IconView: View {
     
-    enum IconPattern: Int {
-        case large = 0
-        case small = 1
-    }
-    
-    let image: String
-    let iconPattern: IconPattern.RawValue
+    let imageName: String // TODO: 将来的にはURLに置き換える
+    let iconPattern: IconPattern
     
     var body: some View {
         
         switch iconPattern {
             
-        case IconPattern.large.rawValue:
-            Image(image)
+        case .large:
+            Image(imageName)
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
                 .frame(width: 148.0, height: 148.0)
                 // 74 × 2 = 148.0
             
-        case IconPattern.small.rawValue:
-            Image(image)
+        case .small:
+            Image(imageName)
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
                 .frame(width: 108.0, height: 108.0)
                 // 54 × 2 = 108.0
             
-            
         default:
-            Image(image)
+            Image(imageName)
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
@@ -49,8 +49,10 @@ struct IconView: View {
     }
 }
 
+#if DEBUG
 struct IconView_Previews: PreviewProvider {
     static var previews: some View {
-        IconView(image: "IMG_6788", iconPattern: 0)
+        IconView(imageName: "IMG_6788", iconPattern: .small)
     }
 }
+#endif

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0483FA3C290669BC001866C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483FA3B290669BC001866C9 /* IconView.swift */; };
 		0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0483FA3B290669BC001866C9 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 		ABDA9519286994B600C7C735 /* Atom */ = {
 			isa = PBXGroup;
 			children = (
+				0483FA3B290669BC001866C9 /* IconView.swift */,
 				ABDA951E286996FA00C7C735 /* TextView.swift */,
 				0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */,
 			);
@@ -188,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
+				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */,
