@@ -1,5 +1,5 @@
 //
-//  testView1.swift
+//  TestView1.swift
 //  portfolio-ios-swiftui
 //
 //  Created by Takeru Sakakibara on 2022/10/11.
