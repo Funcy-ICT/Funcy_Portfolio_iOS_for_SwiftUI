@@ -45,9 +45,9 @@ struct FloatingActionButtonView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             VStack {
-            FloatingActionButtonView()
-            FloatingActionButtonView(isNewGroupPostView: true)
-            FloatingActionButtonView(buttonSize: 30, buttonColor: Color.red, isNewGroupPostView: true)
+                FloatingActionButtonView()
+                FloatingActionButtonView(isNewGroupPostView: true)
+                FloatingActionButtonView(buttonSize: 30, buttonColor: Color.red, isNewGroupPostView: true)
                 
             }
         }
