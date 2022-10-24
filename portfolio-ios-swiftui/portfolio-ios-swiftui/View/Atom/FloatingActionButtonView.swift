@@ -16,28 +16,30 @@ struct FloatingActionButtonView: View {
     var isNewGroupPostView: Bool = false // 対象がグループのものかどうか
     
     var body: some View {
-        NavigationLink(destination: {
-            switch isNewGroupPostView {
-            case true:
+        NavigationLink(
+            destination: {
+                switch isNewGroupPostView {
+                case true:
                     TestView2() // グループの新規投稿View
-            default:
+                default:
                     TestView1() // 個人の新規投稿View
-            
-            }
-        }) {
-            ZStack {
-                Circle()
-                    .fill(buttonColor)
-                    .frame(width: buttonSize, height: buttonSize)
-                    .shadow(radius: 2, x: 1, y: 2)
-                
-                Image(systemName: "plus")
-                    .frame(width: buttonSize, height: buttonSize)
-                    .foregroundColor(.white)
-                    .font(.system(size: buttonSize * 0.7))
-                
-            }
-        }
+                    
+                }
+            },
+            label: {
+                ZStack {
+                    Circle()
+                        .fill(buttonColor)
+                        .frame(width: buttonSize, height: buttonSize)
+                        .shadow(radius: 2, x: 1, y: 2)
+                    
+                    Image(systemName: "plus")
+                        .frame(width: buttonSize, height: buttonSize)
+                        .foregroundColor(.white)
+                        .font(.system(size: buttonSize * 0.7))
+                    
+                }
+            })
     }
 }
 
