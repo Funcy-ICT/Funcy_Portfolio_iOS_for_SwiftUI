@@ -16,6 +16,7 @@
 		ABDA951F286996FA00C7C735 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA951E286996FA00C7C735 /* TextView.swift */; };
 		FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06F9E8288E85110016E401 /* ColorExtension.swift */; };
 		FC7EC30D28EAC89300600302 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EC30C28EAC89300600302 /* TextField.swift */; };
+		FCF3CC96290FA4B8002D2D46 /* SegmentPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF3CC95290FA4B8002D2D46 /* SegmentPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		ABDA951E286996FA00C7C735 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		FC06F9E8288E85110016E401 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FC7EC30C28EAC89300600302 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		FCF3CC95290FA4B8002D2D46 /* SegmentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				ABDA951E286996FA00C7C735 /* TextView.swift */,
 				0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */,
 				FC7EC30C28EAC89300600302 /* TextField.swift */,
+				FCF3CC95290FA4B8002D2D46 /* SegmentPicker.swift */,
 			);
 			path = Atom;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 			files = (
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
+				FCF3CC96290FA4B8002D2D46 /* SegmentPicker.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
 				ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */,
