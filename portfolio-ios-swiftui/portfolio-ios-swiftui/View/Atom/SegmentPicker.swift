@@ -9,20 +9,19 @@ import SwiftUI
 
 struct SegmentPicker: View {
     @State private var selectedIndex = 0
-        //var labelName: [String] = []
-    
+            
     enum StatusPattern{
-        case privatePage
+        case myPage
         case groupPage
         case groupMyPage
     }
+    
     let statusPattern: StatusPattern
 
     var body: some View {
-               
         VStack {
             switch statusPattern{
-            case .privatePage:
+            case .myPage:
                 Picker("", selection: self.$selectedIndex) {
                     Text("作品一覧").tag(0)
                     Text("グループ紹介").tag(1)
@@ -73,17 +72,14 @@ struct SegmentPicker: View {
                     Text("piyo")
                 }
             }
-            
         }
-
     }
 }
 
 struct SegmentPicker_Previews: PreviewProvider {
     static var previews: some View {
-        //let label = ["作品一覧", "プロフィール", "スキル"]
         VStack(spacing: 30){
-            SegmentPicker(statusPattern: .privatePage)
+            SegmentPicker(statusPattern: .myPage)
             SegmentPicker(statusPattern: .groupPage)
             SegmentPicker(statusPattern: .groupMyPage)
         }
