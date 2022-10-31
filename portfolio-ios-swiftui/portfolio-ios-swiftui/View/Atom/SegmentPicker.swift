@@ -13,7 +13,6 @@ struct SegmentPicker: View {
     enum StatusPattern{
         case myPage
         case groupPage
-        case groupMyPage
     }
     
     let statusPattern: StatusPattern
@@ -24,8 +23,8 @@ struct SegmentPicker: View {
             case .myPage:
                 Picker("", selection: self.$selectedIndex) {
                     Text("作品一覧").tag(0)
-                    Text("グループ紹介").tag(1)
-                    Text("メンバー 一覧").tag(2)
+                    Text("プロフィール").tag(1)
+                    Text("スキル").tag(2)
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding(10)
@@ -38,24 +37,8 @@ struct SegmentPicker: View {
                 default:
                     Text("piyo")
                 }
+            
             case .groupPage:
-                Picker("", selection: self.$selectedIndex) {
-                    Text("作品一覧").tag(0)
-                    Text("プロフィール").tag(1)
-                    Text("スキル").tag(2)
-                }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding(10)
-
-                switch selectedIndex {
-                case 0:
-                    Text("hogehoge")
-                case 1:
-                    Text("fugafuga")
-                default:
-                    Text("piyopiyo")
-                }
-            case .groupMyPage:
                 Picker("", selection: self.$selectedIndex) {
                     Text("作品一覧").tag(0)
                     Text("グループ紹介").tag(1)
@@ -81,7 +64,6 @@ struct SegmentPicker_Previews: PreviewProvider {
         VStack(spacing: 30){
             SegmentPicker(statusPattern: .myPage)
             SegmentPicker(statusPattern: .groupPage)
-            SegmentPicker(statusPattern: .groupMyPage)
         }
         
     }
