@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Authinfo {
+struct Authinfo: Codable {
     let signup: SignUp
     let signin: SignIn
 }
@@ -24,7 +24,5 @@ struct SignUp: Codable {
   }
 
 struct SignIn: Codable {
-    let mail: String
-    let password: String
+    let token: String
 }
-

@@ -10,13 +10,22 @@ import SwiftUI
 struct LoginPage: View {
     var body: some View {
         VStack {
+            TextBox(text: "メールアドレス")
+                .padding(.trailing, 30)
+                .padding(.bottom)
+            
+            TextBox(text: "パスワード")
+                .padding(.trailing, 30)
+                .padding(.bottom, 50)
+            
             BaseButtonView(
                 action: {},
-                labelText: "ログイン  " ,
+                labelText: "ログイン　　",
                 foregroundColor: Color.white,
                 backgroundColor: Color.subPink,
                 radius: 25
             )
+            .padding(.top)
             
             Divider()
                 .padding(.top, 30)
