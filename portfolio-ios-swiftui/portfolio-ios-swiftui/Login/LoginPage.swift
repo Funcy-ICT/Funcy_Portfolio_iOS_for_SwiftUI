@@ -8,18 +8,42 @@
 import SwiftUI
 
 struct LoginPage: View {
+    @ObservedObject var login = LoginViewModel()
+    
     var body: some View {
         VStack {
-            TextBox(text: "メールアドレス")
+            VStack(alignment: .leading) {
+                Text("メールアドレス")
+                    .foregroundColor(Color.text)
+                TextField("入力してください", text: $login.mail)
+                    .frame(width: 240, height: 40)
+                    .padding(.leading, 15)
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.grayBottonColor, lineWidth: 2)
+                    )
+                    .padding(.leading, 25)
+            }
                 .padding(.trailing, 30)
                 .padding(.bottom)
             
-            TextBox(text: "パスワード")
+            VStack(alignment: .leading) {
+                Text("パスワード")
+                    .foregroundColor(Color.text)
+                TextField("入力してください", text: $login.password)
+                    .frame(width: 240, height: 40)
+                    .padding(.leading, 15)
+                    .overlay(RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.grayBottonColor, lineWidth: 2)
+                    )
+                    .padding(.leading, 25)
+            }
                 .padding(.trailing, 30)
-                .padding(.bottom, 50)
+                .padding(.bottom)
             
             BaseButtonView(
-                action: {},
+                action: {
+                    login.fetchLoginService()
+                },
                 labelText: "ログイン　　",
                 foregroundColor: Color.white,
                 backgroundColor: Color.subPink,
@@ -42,8 +66,10 @@ struct LoginPage: View {
     }
 }
 
-struct LoginPage_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginPage()
-    }
-}
+// #if DEBUG
+// struct LoginPage_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginPage()
+//    }
+// }
+// #endif
