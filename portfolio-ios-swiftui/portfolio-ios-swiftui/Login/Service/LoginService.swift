@@ -6,17 +6,48 @@
 //
 
 import Foundation
+import SwiftUI
 
-//func login() async throws -> Error {
-//    Task {
-//        let Posturl = URL(string: )!
-//        var request = URLRequest(url: url)
-//
-//        request.httpMethod = "POST"
-//        request.addValue("application/json", forHTTPHeaderField: "content-type")
-//
-//        let (data, response) = try await URLSession.shared.data(from: url)
-//        let userinfo = try JSONDecoder().decode(from: data)
-//        return String(data: data, encoding: .utf8)!
-//    }
-//}
+final class LoginAPIService {
+    
+    static let shared = LoginAPIService()
+    
+    public func fetchLoginService(mail: String, password: String, completion: @escaping (Result<SignIn, Error>) -> Void) {
+        
+        let body: [String: String] = [
+            "mail": "\(mail)",
+            "password": "\(password)"
+        ]
+        
+        // MARK: - 1.API取得先URLの作成
+        
+        // 本番環境ではURLを変更する
+        guard let baseURL = URL(string: "http://localhost:8080/sign/in") else {
+            return
+        }
+        var request = URLRequest(url: baseURL)
+        
+        // MARK: - 2.URLリクエストの作成
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
+        
+        // MARK: - 3.TASKの作成
+        let decorder = JSONDecoder()
+        let task = URLSession.shared.dataTask(with: request) { data, _, error in
+            guard let data = data, error == nil else {
+                return
+            }
+            do {
+                let response = try decorder.decode(SignIn.self, from: data)
+                completion(.success(response))
+                print("SUCCESS: \(response)")
+            } catch {
+                completion(.failure(error))
+            }
+        }
+        
+        // MARK: - 4.TASKの実行
+        task.resume()
+    }
+}
