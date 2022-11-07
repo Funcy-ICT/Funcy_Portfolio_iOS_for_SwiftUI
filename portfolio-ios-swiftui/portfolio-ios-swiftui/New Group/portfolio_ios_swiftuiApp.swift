@@ -11,7 +11,7 @@ import SwiftUI
 struct Portfolio: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginPage()
         }
     }
 }
