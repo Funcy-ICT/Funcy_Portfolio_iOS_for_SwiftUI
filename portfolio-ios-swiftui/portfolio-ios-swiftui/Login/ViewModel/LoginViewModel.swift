@@ -7,14 +7,14 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
 class LoginViewModel: ObservableObject {
     
     @Published var signin: SignIn
     
-    @Published var mail: String = ""
-    @Published var password: String = ""
+    @Published var mail: String
+    @Published var password: String
+//    @Published var error
     
     init() {
         self.signin = SignIn.init(token: "")
@@ -30,6 +30,7 @@ class LoginViewModel: ObservableObject {
                 switch result {
                 case .success(let token):
                     self.signin = token
+                    
                 case .failure(let error):
                     print(error)
                 }
