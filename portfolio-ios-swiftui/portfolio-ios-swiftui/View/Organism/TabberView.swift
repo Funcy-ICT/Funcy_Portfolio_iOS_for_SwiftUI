@@ -21,14 +21,12 @@ struct TabberView: View {
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("検索")
-                        .bold()
                     
                 }
             TestView2() // マイページ（個人）のView
                 .tabItem {
                     Image(systemName: "person")
                     Text("ユーザー")
-                        .bold()
                     
                 }
             TestView1() // マイページ（グループ）のView
