@@ -12,17 +12,16 @@ final class LoginAPIService {
     
     static let shared = LoginAPIService()
     
-    public func fetchLoginService(mail: String, password: String, completion: @escaping (Result<SignIn, Error>) -> Void) {
+    public func fetchLoginService(mail: String, password: String, completion: @escaping (Result<Login, Error>) -> Void) {
         
         let body: [String: String] = [
             "mail": "\(mail)",
             "password": "\(password)"
         ]
-        
+    
         // MARK: - 1.API取得先URLの作成
-        
         // 本番環境ではURLを変更する
-        guard let baseURL = URL(string: "http://localhost:8080/sign/in") else {
+        guard let baseURL = URL(string: "http://localhost:9000/login") else {
             return
         }
         var request = URLRequest(url: baseURL)
@@ -31,7 +30,7 @@ final class LoginAPIService {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: .fragmentsAllowed)
-        
+
         // MARK: - 3.TASKの作成
         let decorder = JSONDecoder()
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
@@ -39,7 +38,7 @@ final class LoginAPIService {
                 return
             }
             do {
-                let response = try decorder.decode(SignIn.self, from: data)
+                let response = try decorder.decode(Login.self, from: data)
                 completion(.success(response))
                 print("SUCCESS: \(response)")
             } catch {

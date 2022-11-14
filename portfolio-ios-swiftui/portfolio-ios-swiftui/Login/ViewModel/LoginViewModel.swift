@@ -10,14 +10,14 @@ import SwiftUI
 
 class LoginViewModel: ObservableObject {
     
-    @Published var signin: SignIn
+    @Published var login: Login
     
     @Published var mail: String
     @Published var password: String
 //    @Published var error
     
     init() {
-        self.signin = SignIn.init(token: "")
+        self.login = Login(token: "")
         self.mail = ""
         self.password = ""
         fetchLoginService()
@@ -29,7 +29,7 @@ class LoginViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let token):
-                    self.signin = token
+                    self.login = token
                     
                 case .failure(let error):
                     print(error)

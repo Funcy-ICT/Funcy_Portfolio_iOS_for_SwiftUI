@@ -9,7 +9,7 @@ import Foundation
 
 struct Authinfo: Codable {
     let signup: SignUp
-    let signin: SignIn
+    let login: Login
 }
 
 struct SignUp: Codable {
@@ -23,6 +23,6 @@ struct SignUp: Codable {
     let displayName: String
   }
 
-struct SignIn: Codable {
+struct Login: Codable {
     let token: String
 }
