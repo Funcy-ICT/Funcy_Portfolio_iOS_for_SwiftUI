@@ -15,5 +15,5 @@ extension Color {
     static let textPinkColor = Color("upSidePink")
     static let text = Color("subTextColor")
     static let subPink = Color("downSidePink")
-    static let tabberColor = Color("tabberColor")
+    static let tabbarColor = Color("tabbarColor")
 }

@@ -1,5 +1,5 @@
 //
-//  TabberView.swift
+//  TabBarView.swift
 //  portfolio-ios-swiftui
 //
 //  Created by Takeru Sakakibara on 2022/10/31.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct TabberView: View {
+struct TabBarView: View {
     
     init() {
         // TabViewの背景色の設定
-        UITabBar.appearance().backgroundColor = UIColor(Color.tabberColor)
+        UITabBar.appearance().backgroundColor = UIColor(Color.tabbarColor)
         
     }
     
@@ -48,9 +48,9 @@ struct TabberView: View {
     
 }
 
-struct TabberView_Previews: PreviewProvider {
+struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
-        TabberView()
+        TabBarView()
             .previewInterfaceOrientation(.portrait)
         
     }
