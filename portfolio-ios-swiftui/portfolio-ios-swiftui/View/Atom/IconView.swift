@@ -30,7 +30,7 @@ struct IconView: View {
                 .frame(width: 148.0, height: 148.0)
         // 74 × 2 = 148.0
 
-        default:
+        case .small:
             Image(imageName)
                 .resizable()
                 .clipShape(Circle())
@@ -41,10 +41,10 @@ struct IconView: View {
     }
 }
 
-// #if DEBUG
-// struct IconView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        IconView(imageName: "IMG_6788", iconPattern: .large)
-//    }
-// }
-// #endif
+#if DEBUG
+struct IconView_Previews: PreviewProvider {
+    static var previews: some View {
+        IconView(imageName: "IMG_6788", iconPattern: .small)
+    }
+}
+#endif
