@@ -18,8 +18,10 @@ struct PublishingSettingToggleButtonView: View {
     
 }
 
+/*
 struct PublishingSettingToggleButtonView_Previews: PreviewProvider {
     static var previews: some View {
         PublishingSettingToggleButtonView(publishing: true)
     }
 }
+ */
