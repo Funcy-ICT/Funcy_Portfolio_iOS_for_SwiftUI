@@ -42,7 +42,7 @@ struct TabBarView: View {
                     
                 }
             
-        }.accentColor(.subPink)
+        }.accentColor(.textPinkColor)
         
     }
     
