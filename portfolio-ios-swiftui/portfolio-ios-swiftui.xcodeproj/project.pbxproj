@@ -11,6 +11,7 @@
 		AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */; };
 		AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F928F542C700DCE061 /* TestView1.swift */; };
 		AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FB28F542D900DCE061 /* TestView2.swift */; };
+		AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 		AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonView.swift; sourceTree = "<group>"; };
 		AA31E7F928F542C700DCE061 /* TestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView1.swift; sourceTree = "<group>"; };
 		AA31E7FB28F542D900DCE061 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
+		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = portfolio_ios_swiftuiApp.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */,
 				AA31E7F928F542C700DCE061 /* TestView1.swift */,
 				AA31E7FB28F542D900DCE061 /* TestView2.swift */,
+				AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */,
 			);
 			path = Atom;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
+				AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */,
 				ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */,
 				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
