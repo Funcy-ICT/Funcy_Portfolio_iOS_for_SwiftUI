@@ -23,8 +23,8 @@ struct LoginPage: View {
                     )
                     .padding(.leading, 25)
             }
-                .padding(.trailing, 30)
-                .padding(.bottom)
+            .padding(.trailing, 30)
+            .padding(.bottom)
             
             VStack(alignment: .leading) {
                 Text("パスワード")
@@ -37,8 +37,8 @@ struct LoginPage: View {
                     )
                     .padding(.leading, 25)
             }
-                .padding(.trailing, 30)
-                .padding(.bottom)
+            .padding(.trailing, 30)
+            .padding(.bottom)
             
             BaseButtonView(
                 action: {
