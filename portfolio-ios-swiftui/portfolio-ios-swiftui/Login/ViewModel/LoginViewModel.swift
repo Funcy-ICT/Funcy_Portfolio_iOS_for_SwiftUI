@@ -14,7 +14,7 @@ class LoginViewModel: ObservableObject {
     
     @Published var mail: String
     @Published var password: String
-//    @Published var error
+    //    @Published var error
     
     init() {
         self.login = Login(token: "")
@@ -24,16 +24,14 @@ class LoginViewModel: ObservableObject {
     }
     
     func fetchLoginService() {
-        LoginAPIService.shared.fetchLoginService(mail: mail, password: password) { result in
-            // MARK: - dispatchを使う理由はfetchに時間がかかるから、アプリの裏側で実行する
-            DispatchQueue.main.async {
-                switch result {
-                case .success(let token):
-                    self.login = token
-                    
-                case .failure(let error):
-                    print(error)
-                }
+        // MARK: - dispatchを使う理由はfetchに時間がかかるから、アプリの裏側で実行する
+        Task.detached {
+            do {
+                let response = try await LoginAPIService.shared.fetchLoginService(mail: self.mail, password: self.password)
+                // エラーがなければ必ず通る
+                print(response)
+            } catch {
+                print(error.localizedDescription)
             }
         }
     }
