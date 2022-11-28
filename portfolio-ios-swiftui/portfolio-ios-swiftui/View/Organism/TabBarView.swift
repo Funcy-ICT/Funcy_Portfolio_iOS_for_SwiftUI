@@ -41,21 +41,18 @@ struct TabBarView: View {
                     Image(systemName: "gearshape")
                     Text("設定")
                 }
-            
         }.accentColor(.textPinkColor)
-        
     }
-    
 }
 
 /*
-struct TabBarView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        TabBarView()
-            .previewInterfaceOrientation(.portrait)
-        
-    }
-    
-}
+ struct TabBarView_Previews: PreviewProvider {
+ 
+ static var previews: some View {
+ TabBarView()
+ .previewInterfaceOrientation(.portrait)
+ 
+ }
+ 
+ }
  */
