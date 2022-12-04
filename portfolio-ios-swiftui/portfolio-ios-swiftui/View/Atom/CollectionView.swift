@@ -22,13 +22,14 @@ struct CustomCell: View, Identifiable {
                 .clipped()
                 .cornerRadius(20)
 
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 4) {
                 Text(title).font(.system(size: 14)).padding(.leading, 10)
                 Text(content).font(.system(size: 14)).padding(.leading, 10)
             }
             .frame(width: 150, height: 50, alignment: .leading)
             .background(Color.white)
         }
+        //枠線
         .frame(width: 150, height: 152)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -50,7 +51,9 @@ struct CollectionView: View {
         CustomCell(title: "vagabond_sack", content: "リュックサック", imgPath: "vagabond_sack"),
         CustomCell(title: "varsity_socks", content: "ソックス", imgPath: "varsity_socks"),
         CustomCell(title: "whitey_belt", content: "ベルト", imgPath: "whitey_belt"),
-        CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack")
+        CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack"),
+        CustomCell(title: "gilt_desk_trio", content: "小物入れ", imgPath: "gilt_desk_trio"),
+        CustomCell(title: "shrug_bag", content: "バッグ", imgPath: "shrug_bag")
 
     ]
 
