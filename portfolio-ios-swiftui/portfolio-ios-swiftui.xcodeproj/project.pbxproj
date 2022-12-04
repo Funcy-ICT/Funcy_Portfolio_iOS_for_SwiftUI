@@ -19,6 +19,7 @@
 		ABDA951F286996FA00C7C735 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA951E286996FA00C7C735 /* TextView.swift */; };
 		FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06F9E8288E85110016E401 /* ColorExtension.swift */; };
 		FC7EC30D28EAC89300600302 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EC30C28EAC89300600302 /* TextField.swift */; };
+		FC89E25129354F8C00E2A75D /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC89E25029354F8C00E2A75D /* CollectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		ABDA951E286996FA00C7C735 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		FC06F9E8288E85110016E401 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FC7EC30C28EAC89300600302 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		FC89E25029354F8C00E2A75D /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */,
 				AA31E7F928F542C700DCE061 /* TestView1.swift */,
 				AA31E7FB28F542D900DCE061 /* TestView2.swift */,
+				FC89E25029354F8C00E2A75D /* CollectionView.swift */,
 			);
 			path = Atom;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
+				FC89E25129354F8C00E2A75D /* CollectionView.swift in Sources */,
 				ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */,
 				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
