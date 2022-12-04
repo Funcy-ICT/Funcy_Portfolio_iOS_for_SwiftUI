@@ -18,8 +18,9 @@ struct CustomCell: View, Identifiable {
             Image(imgPath)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 150, height: 150)
-            // .padding(.top, -40)
+                .frame(width: 150, height: 150, alignment: .top)
+                .clipped()
+                .cornerRadius(20)
 
             VStack(alignment: .leading) {
                 Text(title).font(.system(size: 14)).padding(.leading, 10)
@@ -31,9 +32,8 @@ struct CustomCell: View, Identifiable {
         .frame(width: 150, height: 152)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.gray, lineWidth: 2)
+                .stroke(Color.gray, lineWidth: 1)
         )
-        .cornerRadius(20)
     }
 }
 
@@ -43,14 +43,14 @@ struct CollectionView: View {
 
     // 後々サーバから画像を取得
     let data: [CustomCell] = [
-        CustomCell(title: "ももがみさま", content: "hogehoge", imgPath: "garden_strand"),
-        CustomCell(title: "hoge", content: "hogehoge", imgPath: "gatsby_hat"),
-        CustomCell(title: "fuga", content: "fugafuga", imgPath: "stella_sunglasses"),
-        CustomCell(title: "fuga", content: "fugafuga", imgPath: "strut_earrings"),
-        CustomCell(title: "fuga", content: "fugafuga", imgPath: "vagabond_sack"),
-        CustomCell(title: "fuga", content: "fugafuga", imgPath: "varsity_socks"),
-        CustomCell(title: "fuga", content: "fugafuga", imgPath: "whitey_belt"),
-        CustomCell(title: "fuga", content: "fugafuga", imgPath: "copper_wire_rack")
+        CustomCell(title: "garden_strand", content: "ネックレス", imgPath: "garden_strand"),
+        CustomCell(title: "gatsby_hat", content: "ハット", imgPath: "gatsby_hat"),
+        CustomCell(title: "stella_sunglasses", content: "グラス", imgPath: "stella_sunglasses"),
+        CustomCell(title: "strut_earrings", content: "イヤリング", imgPath: "strut_earrings"),
+        CustomCell(title: "vagabond_sack", content: "リュックサック", imgPath: "vagabond_sack"),
+        CustomCell(title: "varsity_socks", content: "ソックス", imgPath: "varsity_socks"),
+        CustomCell(title: "whitey_belt", content: "ベルト", imgPath: "whitey_belt"),
+        CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack")
 
     ]
 

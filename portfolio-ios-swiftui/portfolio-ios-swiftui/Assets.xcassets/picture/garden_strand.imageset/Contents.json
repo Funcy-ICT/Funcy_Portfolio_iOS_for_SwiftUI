@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "garden_strand.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "garden_strand.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
