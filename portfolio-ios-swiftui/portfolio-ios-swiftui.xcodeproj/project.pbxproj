@@ -11,6 +11,7 @@
 		AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */; };
 		AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F928F542C700DCE061 /* TestView1.swift */; };
 		AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FB28F542D900DCE061 /* TestView2.swift */; };
+		AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */; };
 		AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D18283B78F100F890BC /* portfolio_ios_swiftuiApp.swift */; };
@@ -19,6 +20,7 @@
 		ABAF1D20283B78F800F890BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1F283B78F800F890BC /* Preview Assets.xcassets */; };
 		ABDA951F286996FA00C7C735 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA951E286996FA00C7C735 /* TextView.swift */; };
 		FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06F9E8288E85110016E401 /* ColorExtension.swift */; };
+		FC7EC30D28EAC89300600302 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EC30C28EAC89300600302 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,7 @@
 		AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonView.swift; sourceTree = "<group>"; };
 		AA31E7F928F542C700DCE061 /* TestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView1.swift; sourceTree = "<group>"; };
 		AA31E7FB28F542D900DCE061 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
+		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
 		AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +38,7 @@
 		ABAF1D1F283B78F800F890BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		ABDA951E286996FA00C7C735 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
 		FC06F9E8288E85110016E401 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		FC7EC30C28EAC89300600302 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,11 @@
 			children = (
 				ABDA951E286996FA00C7C735 /* TextView.swift */,
 				0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */,
+				FC7EC30C28EAC89300600302 /* TextField.swift */,
 				AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */,
 				AA31E7F928F542C700DCE061 /* TestView1.swift */,
 				AA31E7FB28F542D900DCE061 /* TestView2.swift */,
+				AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */,
 			);
 			path = Atom;
 			sourceTree = "<group>";
@@ -213,6 +219,8 @@
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
+				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
+				AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */,
 				ABAF1D19283B78F100F890BC /* portfolio_ios_swiftuiApp.swift in Sources */,
 				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
@@ -357,7 +365,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun..portfolio-ios-swiftui";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun.portfolio-ios-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -386,7 +394,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun..portfolio-ios-swiftui";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.ac.fun.portfolio-ios-swiftui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

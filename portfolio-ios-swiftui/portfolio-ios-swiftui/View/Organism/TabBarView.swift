@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
+
     init() {
         // TabViewの背景色の設定
         UITabBar.appearance().backgroundColor = UIColor(Color.tabbarColor)
     }
-    
+
     var body: some View {
         TabView {
             TestView1() // メイン画面のView
