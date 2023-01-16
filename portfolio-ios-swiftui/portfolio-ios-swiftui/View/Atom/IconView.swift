@@ -41,10 +41,10 @@ struct IconView: View {
     }
 }
 
-#if DEBUG
-struct IconView_Previews: PreviewProvider {
-    static var previews: some View {
-        IconView(imageName: "IMG_6788", iconPattern: .small)
-    }
-}
-#endif
+// #if DEBUG
+// struct IconView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        IconView(imageName: "IMG_6788", iconPattern: .small)
+//    }
+// }
+// #endif
