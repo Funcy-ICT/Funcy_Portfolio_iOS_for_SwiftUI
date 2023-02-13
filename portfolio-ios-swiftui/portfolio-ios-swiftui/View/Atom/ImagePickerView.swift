@@ -30,10 +30,11 @@ struct ImagePickerView: View {
         .tabViewStyle(PageTabViewStyle())
     }
 }
+
 // #if DEBUG
 // struct ImagePickerView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ImagePickerView(images: ["Unknown", "Unknown1", "Unknown2"])
 //    }
 // }
-//
+// #endif
