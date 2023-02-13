@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0483FA3C290669BC001866C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483FA3B290669BC001866C9 /* IconView.swift */; };
 		0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */; };
 		AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */; };
 		AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F928F542C700DCE061 /* TestView1.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0483FA3B290669BC001866C9 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonView.swift; sourceTree = "<group>"; };
 		AA31E7F928F542C700DCE061 /* TestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView1.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		ABDA9519286994B600C7C735 /* Atom */ = {
 			isa = PBXGroup;
 			children = (
+				0483FA3B290669BC001866C9 /* IconView.swift */,
 				ABDA951E286996FA00C7C735 /* TextView.swift */,
 				0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */,
 				FC7EC30C28EAC89300600302 /* TextField.swift */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
+				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
