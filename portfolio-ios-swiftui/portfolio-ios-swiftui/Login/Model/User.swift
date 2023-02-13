@@ -9,7 +9,7 @@ import Foundation
 
 struct User {
     let token: String
-    let icon: String
+    let userIcon: String
     let familyName: String
     let firstName: String
     let mail: String

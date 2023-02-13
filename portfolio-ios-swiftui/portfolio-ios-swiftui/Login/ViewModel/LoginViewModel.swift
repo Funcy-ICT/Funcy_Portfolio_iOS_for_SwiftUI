@@ -5,7 +5,6 @@
 //  Created by 鳥山英峻 on 2022/10/24.
 //
 
-import Foundation
 import SwiftUI
 
 class LoginViewModel: ObservableObject {
