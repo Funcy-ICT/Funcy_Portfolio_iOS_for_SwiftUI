@@ -6,9 +6,18 @@
 //
 
 import SwiftUI
+import YouTubePlayerKit
 
 struct IndividualDetalisView: View {
+    
+    let youTubePlayer: YouTubePlayer = "https://youtube.com/watch?v=psL_5RIBqnY"
+    let bounds = UIScreen.main.bounds
+    
     var body: some View {
+        
+        let mobileWidth = Double(bounds.width) * 1
+        let mobileHeight = Double(bounds.height) * 0.3
+        
         VStack {
             HStack {
                 Image(systemName: "chevron.backward")
@@ -54,7 +63,7 @@ struct IndividualDetalisView: View {
                     }
                     
                     HStack {
-                        TextView(text: "github", textPattern: 0)
+                        TextView(text: "Github", textPattern: 0)
                         Link(destination: URL(string: "https://github.com/zekuta-x")!) {
                             Image(systemName: "link")
                                 .frame(width: 32, height: 32)
@@ -64,13 +73,24 @@ struct IndividualDetalisView: View {
                                 .padding(.leading)
                         }
                     }
-                    
-                    HStack {
-                        TextView(text: "動画", textPattern: 0)
-                    }
+
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(20)
+                
+                YouTubePlayerView(self.youTubePlayer) { state in
+                    switch state {
+                    case .idle:
+                        ProgressView()
+                    case .ready:
+                        EmptyView()
+                    case .error(_):
+                        Text(verbatim: "動画が読み込めませんでした。詳しくは運営までお問い合わせください。")
+                    }
+                }
+                .padding(.horizontal)
+                .frame(width: mobileWidth, height: mobileHeight)
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .frame(maxHeight: .infinity, alignment: .top)
