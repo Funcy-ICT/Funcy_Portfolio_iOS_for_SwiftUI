@@ -15,6 +15,8 @@
 		AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */; };
 		AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */; };
 		AB633C82299F10F300F57244 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB633C81299F10F300F57244 /* ImageSelectView.swift */; };
+		AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */; };
+		AB58414F299B520F00FD9493 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB58414E299B520F00FD9493 /* YouTubePlayerKit */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
 		ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1C283B78F800F890BC /* Assets.xcassets */; };
@@ -40,6 +42,7 @@
 		AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
 		AB633C81299F10F300F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
+		AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualDetalisView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D1A283B78F100F890BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB58414F299B520F00FD9493 /* YouTubePlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,22 @@
 				AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */,
 			);
 			path = Organism;
+			sourceTree = "<group>";
+		};
+		AB584149299B014B00FD9493 /* WorkDetails */ = {
+			isa = PBXGroup;
+			children = (
+				AB58414A299B015B00FD9493 /* Individual */,
+			);
+			path = WorkDetails;
+			sourceTree = "<group>";
+		};
+		AB58414A299B015B00FD9493 /* Individual */ = {
+			isa = PBXGroup;
+			children = (
+				AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */,
+			);
+			path = Individual;
 			sourceTree = "<group>";
 		};
 		ABAF1D0C283B78F100F890BC = {
@@ -96,6 +116,7 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				AB584149299B014B00FD9493 /* WorkDetails */,
 				ABB3AD30284DEA84004C012E /* View */,
 				ABC44B162918F62D00BBE1A6 /* Login */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
@@ -202,6 +223,9 @@
 			dependencies = (
 			);
 			name = "portfolio-ios-swiftui";
+			packageProductDependencies = (
+				AB58414E299B520F00FD9493 /* YouTubePlayerKit */,
+			);
 			productName = "portfolio-ios-swiftui";
 			productReference = ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +254,9 @@
 				Base,
 			);
 			mainGroup = ABAF1D0C283B78F100F890BC;
+			packageReferences = (
+				AB58414D299B520F00FD9493 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+			);
 			productRefGroup = ABAF1D16283B78F100F890BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,6 +309,7 @@
 				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AB633C82299F10F300F57244 /* ImageSelectView.swift in Sources */,
+				AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
@@ -424,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"portfolio-ios-swiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = 96HRR7LBPW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -496,6 +525,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB58414D299B520F00FD9493 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB58414E299B520F00FD9493 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB58414D299B520F00FD9493 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABAF1D0D283B78F100F890BC /* Project object */;
 }
