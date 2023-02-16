@@ -9,6 +9,7 @@ import SwiftUI
 import YouTubePlayerKit
 
 struct IndividualDetalisView: View {
+    @ObservedObject var workinfo = WorkViewModel()
     
     let youTubePlayer: YouTubePlayer = "https://youtube.com/watch?v=psL_5RIBqnY"
     let bounds = UIScreen.main.bounds
@@ -53,15 +54,15 @@ struct IndividualDetalisView: View {
             .padding(.top, 20)
             
             ScrollView {
-                ImageSelectView(images: ["Unknown", "Unknown1", "Unknown2"])
+                ImageSelectView(images: ["\(workinfo.work.images)"])
                 
                 Group {
                     TextView(text: "タイトル", textPattern: 1)
-                    
+                    TextView(text: "\(workinfo.work.title)", textPattern: 1)
                     HStack {
                         TextView(text: "説明文", textPattern: 0)
+                        TextView(text: "\(workinfo.work.description)", textPattern: 0)
                     }
-                    
                     HStack {
                         TextView(text: "Github", textPattern: 0)
                         Link(destination: URL(string: "https://github.com/zekuta-x")!) {
