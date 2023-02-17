@@ -17,6 +17,7 @@
 		AB633C82299F10F300F57244 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB633C81299F10F300F57244 /* ImageSelectView.swift */; };
 		AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */; };
 		AB58414F299B520F00FD9493 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB58414E299B520F00FD9493 /* YouTubePlayerKit */; };
+		AB633C85299F153B00F57244 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB633C84299F153A00F57244 /* ImageSelectView.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
 		ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1C283B78F800F890BC /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
 		AB633C81299F10F300F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
 		AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualDetalisView.swift; sourceTree = "<group>"; };
+		AB633C84299F153A00F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D1A283B78F100F890BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 			path = Works;
 			sourceTree = "<group>";
 		};
+		AB633C83299F153A00F57244 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				AB633C84299F153A00F57244 /* ImageSelectView.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
 		ABAF1D0C283B78F100F890BC = {
 			isa = PBXGroup;
 			children = (
@@ -139,7 +149,7 @@
 		ABB3AD30284DEA84004C012E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ABF61685299A25EB00DE0E51 /* Molecules */,
+				AB633C83299F153A00F57244 /* Molecules */,
 				AA31E7FE290F9C5900DCE061 /* Organism */,
 				ABDA9519286994B600C7C735 /* Atom */,
 				FC06F9E8288E85110016E401 /* ColorExtension.swift */,
@@ -335,6 +345,7 @@
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AB633C82299F10F300F57244 /* ImageSelectView.swift in Sources */,
 				AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */,
+				AB633C85299F153B00F57244 /* ImageSelectView.swift in Sources */,
 				ABBA76A3299DD2570061CD50 /* WorkDatailAPIService.swift in Sources */,
 				ABBA76A1299CFCE30061CD50 /* WorkViewModel.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
