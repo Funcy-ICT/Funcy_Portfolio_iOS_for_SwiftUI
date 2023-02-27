@@ -67,7 +67,7 @@ struct LoginPage: View {
                 radius: 25
             )
             .fullScreenCover(isPresented: self.$new_register) {
-                SignUpPage()
+                SignupPage()
             }
             .padding(.top, 60)
         }

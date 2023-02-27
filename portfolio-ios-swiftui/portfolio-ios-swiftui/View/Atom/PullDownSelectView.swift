@@ -11,14 +11,14 @@ struct PullDownSelectView: View {
     
     var labelName: String
     
-    @State var selectList = [""]
-    @State var startSelection = ""
+    @State var selectList: [String]
+    @Binding var selectionLabel: String
     
     var body: some View {
         VStack(alignment: .leading) {
             TextView(text: labelName, textPattern: 0)
             
-            Picker("", selection: $startSelection) {
+            Picker("", selection: $selectionLabel) {
                 ForEach($selectList, id: \.self) { item in
                     // @Stateで参照しているためwrappedValueを用いる
                     Text(item.wrappedValue)

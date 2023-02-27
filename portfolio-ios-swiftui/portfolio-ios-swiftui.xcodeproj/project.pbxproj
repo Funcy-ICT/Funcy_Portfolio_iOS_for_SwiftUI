@@ -14,12 +14,15 @@
 		AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FB28F542D900DCE061 /* TestView2.swift */; };
 		AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */; };
 		AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */; };
-		AB2187C829A21CBF00B54172 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2187C729A21CBF00B54172 /* SignUpPage.swift */; };
+		AB2187C829A21CBF00B54172 /* SignupPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2187C729A21CBF00B54172 /* SignupPage.swift */; };
 		AB2187CA29A3412600B54172 /* PullDownSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB2187C929A3412600B54172 /* PullDownSelectView.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
 		ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1C283B78F800F890BC /* Assets.xcassets */; };
 		ABAF1D20283B78F800F890BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1F283B78F800F890BC /* Preview Assets.xcassets */; };
+		ABBB849929AC67D80066B787 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB849829AC67D80066B787 /* SignupViewModel.swift */; };
+		ABBB849C29AC781B0066B787 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB849B29AC781B0066B787 /* Register.swift */; };
+		ABBB849E29AC7AA20066B787 /* SignupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBB849D29AC7AA20066B787 /* SignupService.swift */; };
 		ABC44B202918F62D00BBE1A6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B182918F62D00BBE1A6 /* LoginViewModel.swift */; };
 		ABC44B212918F62D00BBE1A6 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B192918F62D00BBE1A6 /* LoginPage.swift */; };
 		ABC44B222918F62D00BBE1A6 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B1B2918F62D00BBE1A6 /* Auth.swift */; };
@@ -40,13 +43,16 @@
 		AA31E7FB28F542D900DCE061 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
-		AB2187C729A21CBF00B54172 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
+		AB2187C729A21CBF00B54172 /* SignupPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPage.swift; sourceTree = "<group>"; };
 		AB2187C929A3412600B54172 /* PullDownSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDownSelectView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D1A283B78F100F890BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ABAF1D1C283B78F800F890BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABAF1D1F283B78F800F890BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABBB849829AC67D80066B787 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		ABBB849B29AC781B0066B787 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		ABBB849D29AC7AA20066B787 /* SignupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupService.swift; sourceTree = "<group>"; };
 		ABC44B182918F62D00BBE1A6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ABC44B192918F62D00BBE1A6 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		ABC44B1B2918F62D00BBE1A6 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -81,10 +87,10 @@
 		AB2187C629A21C9300B54172 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB849A29AC77F60066B787 /* Model */,
 				ABBB849529AC45E50066B787 /* ViewModel */,
 				ABBB849729AC45F50066B787 /* Service */,
-				ABBB849629AC45EE0066B787 /* Model */,
-				AB2187C729A21CBF00B54172 /* SignUpPage.swift */,
+				AB2187C729A21CBF00B54172 /* SignupPage.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -141,22 +147,25 @@
 		ABBB849529AC45E50066B787 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB849829AC67D80066B787 /* SignupViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		ABBB849629AC45EE0066B787 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		ABBB849729AC45F50066B787 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB849D29AC7AA20066B787 /* SignupService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		ABBB849A29AC77F60066B787 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABBB849B29AC781B0066B787 /* Register.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		ABC44B162918F62D00BBE1A6 /* Login */ = {
@@ -307,6 +316,7 @@
 				ABC44B232918F62D00BBE1A6 /* User.swift in Sources */,
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
 				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
+				ABBB849929AC67D80066B787 /* SignupViewModel.swift in Sources */,
 				AB2187CA29A3412600B54172 /* PullDownSelectView.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
@@ -314,8 +324,9 @@
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				ABC44B212918F62D00BBE1A6 /* LoginPage.swift in Sources */,
-				AB2187C829A21CBF00B54172 /* SignUpPage.swift in Sources */,
+				AB2187C829A21CBF00B54172 /* SignupPage.swift in Sources */,
 				ABC44B252918F62D00BBE1A6 /* LoginService.swift in Sources */,
+				ABBB849E29AC7AA20066B787 /* SignupService.swift in Sources */,
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
 				AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */,
 				ABC44B242918F62D00BBE1A6 /* APIServiceError.swift in Sources */,
@@ -324,6 +335,7 @@
 				ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
 				ABC44B222918F62D00BBE1A6 /* Auth.swift in Sources */,
+				ABBB849C29AC781B0066B787 /* Register.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

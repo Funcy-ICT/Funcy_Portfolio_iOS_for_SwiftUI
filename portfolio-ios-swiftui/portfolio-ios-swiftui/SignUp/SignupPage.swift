@@ -7,16 +7,19 @@
 
 import SwiftUI
 
-struct SignUpPage: View {
+struct SignupPage: View {
     
-    @State private var input = ""
-    @State private var ikkk = ""
-    
+    @ObservedObject var signup = SignupViewModel()
     @State var end_register: Bool = false
+    
+    let gradeList = ["学部1年", "学部2年", "学部3年", "学部4年","修士1年","修士2年","博士1年","博士2年","博士3年"]
+    let courseList = ["情報システムコース","情報デザインコース","複雑系コース","知能システムコース","情報アーキテクチャ領域","高度ICT領域","メディアデザイン領域","複雑系情報科学領域","知能情報科学領域"]
     
     var body: some View {
         VStack {
+            // MARK: - backbutton処理
             Button(action: {
+                // アニメーションを削除する処理
                 var transaction = Transaction()
                 transaction.disablesAnimations = true
                 withTransaction(transaction) {
@@ -35,13 +38,14 @@ struct SignUpPage: View {
             .fullScreenCover(isPresented: $end_register) {
                 LoginPage()
             }
+            // MARK: - 入力フォーム処理
             
             ScrollView {
                 VStack {
                     VStack {
                         HStack {
                             TextView(text: "表示名", textPattern: 0)
-                            TextField("", text: $input)
+                            TextField("", text: $signup.displayName)
                                 .frame(width: 140, height: 50)
                                 .padding(.leading, 15)
                                 .overlay(RoundedRectangle(cornerRadius: 15)
@@ -63,7 +67,7 @@ struct SignUpPage: View {
                     VStack(spacing: 15) {
                         HStack {
                             TextView(text: "姓", textPattern: 0)
-                            TextField("", text: $input)
+                            TextField("", text: $signup.familyName)
                                 .frame(width: 240, height: 48)
                                 .padding(.leading, 15)
                                 .overlay(RoundedRectangle(cornerRadius: 15)
@@ -74,7 +78,7 @@ struct SignUpPage: View {
                         
                         HStack {
                             TextView(text: "名", textPattern: 0)
-                            TextField("", text: $input)
+                            TextField("", text: $signup.firstName)
                                 .frame(width: 240, height: 48)
                                 .padding(.leading, 15)
                                 .overlay(RoundedRectangle(cornerRadius: 15)
@@ -86,16 +90,20 @@ struct SignUpPage: View {
                     .padding(.bottom, 20)
                     
                     VStack(spacing: 20) {
-                        TextBox(fieldHide: false, titleText: "メールアドレス", descriptionText: "学内メールを入力してください", inputText: $ikkk)
-                        TextBox(fieldHide: true, titleText: "パスワード", descriptionText: "", inputText: $ikkk)
-                        TextBox(fieldHide: true, titleText: "パスワード確認", descriptionText: "", inputText: $ikkk)
-                        PullDownSelectView(labelName: "学年", selectList: ["学部1年", "学部2年", "学部3年", "学部4年"], startSelection: "学部1年")
-                        PullDownSelectView(labelName: "所属コース", selectList: ["aaa", "bbb", "ccc", "ddd"], startSelection: "bbb")
+                        TextBox(fieldHide: false, titleText: "メールアドレス", descriptionText: "学内メールを入力してください", inputText: $signup.mail)
+                        TextBox(fieldHide: true, titleText: "パスワード", descriptionText: "", inputText: $signup.password)
+                        TextBox(fieldHide: true, titleText: "パスワード確認", descriptionText: "", inputText: $signup.checkPassword)
+                        PullDownSelectView(labelName: "学年", selectList: gradeList, selectionLabel: $signup.grade)
+                        PullDownSelectView(labelName: "所属コース", selectList: courseList, selectionLabel: $signup.course)
                     }
                     .padding(.bottom, 40)
                     
+                    // MARK: - 登録処理
+                    
                     BaseButtonView(
-                        action: {},
+                        action: {
+                            signup.fetchSignupService()
+                        },
                         labelText: "新規会員登録",
                         foregroundColor: Color.white,
                         backgroundColor: Color.subPink, radius: 25
@@ -106,8 +114,8 @@ struct SignUpPage: View {
     }
 }
 
-struct SignUpPage_Previews: PreviewProvider {
+struct SignupPage_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpPage()
+        SignupPage()
     }
 }
