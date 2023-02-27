@@ -10,6 +10,9 @@ import SwiftUI
 struct LoginPage: View {
     @ObservedObject var login = LoginViewModel()
     
+    @State var new_login: Bool = false
+    @State var new_register: Bool = false
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading) {
@@ -55,12 +58,17 @@ struct LoginPage: View {
                 .padding(.top, 30)
             
             BaseButtonView(
-                action: {},
+                action: {
+                    self.new_register.toggle()
+                },
                 labelText: "新規会員登録",
                 foregroundColor: Color.text,
                 backgroundColor: Color.grayBottonColor,
                 radius: 25
             )
+            .fullScreenCover(isPresented: self.$new_register) {
+                SignUpPage()
+            }
             .padding(.top, 60)
         }
     }

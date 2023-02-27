@@ -81,6 +81,9 @@
 		AB2187C629A21C9300B54172 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				ABBB849529AC45E50066B787 /* ViewModel */,
+				ABBB849729AC45F50066B787 /* Service */,
+				ABBB849629AC45EE0066B787 /* Model */,
 				AB2187C729A21CBF00B54172 /* SignUpPage.swift */,
 			);
 			path = SignUp;
@@ -133,6 +136,27 @@
 				FC06F9E8288E85110016E401 /* ColorExtension.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ABBB849529AC45E50066B787 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABBB849629AC45EE0066B787 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABBB849729AC45F50066B787 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		ABC44B162918F62D00BBE1A6 /* Login */ = {
