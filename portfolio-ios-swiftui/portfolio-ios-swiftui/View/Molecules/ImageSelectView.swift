@@ -14,8 +14,8 @@ struct ImageSelectView: View {
     
     var body: some View {
         
-        let width = Double(bounds.width) * 1
-        let height = Double(bounds.height) * 0.3
+        let width = bounds.width * 1
+        let height = bounds.height * 0.3
         
         TabView {
             ForEach(images, id: \.self) { item in
@@ -23,18 +23,26 @@ struct ImageSelectView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: width, height: height)
-                    .background(Color(UIColor.systemGray5))
+                    .background(Color(UIColor.white))
             }
         }
-        .frame(height: height + 20)
+        .frame(height: height + 90)
         .tabViewStyle(PageTabViewStyle())
+        .onAppear {
+            setupAppearance()
+        }
     }
+    
+    func setupAppearance() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.systemPink
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.systemPink.withAlphaComponent(0.2)
+      }
 }
 
- #if DEBUG
- struct ImageSelectView_Previews: PreviewProvider {
-    static var previews: some View {
-        ImageSelectView(images: ["Unknown", "Unknown1", "Unknown2"])
-    }
- }
- #endif
+// #if DEBUG
+// struct ImageSelectView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ImageSelectView(images: ["Unknown", "Unknown1", "Unknown2"])
+//    }
+// }
+// #endif
