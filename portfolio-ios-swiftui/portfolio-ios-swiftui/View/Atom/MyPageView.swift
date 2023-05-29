@@ -19,9 +19,6 @@ struct MyPageView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding(10)
-            .onChange(of: selectedIndex) { newValue in
-                print("\(newValue)")
-            }
             
             switch selectedIndex {
             case 0:
