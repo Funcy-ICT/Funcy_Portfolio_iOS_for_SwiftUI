@@ -10,8 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            MyPageView()
-            //var stateNum:Int = MyPageView().NowState()
+            Text("Hello, world!")
         }
         
     }
