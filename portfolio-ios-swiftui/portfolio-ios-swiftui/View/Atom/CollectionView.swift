@@ -12,6 +12,7 @@ struct CustomCell: View, Identifiable {
     var title: String
     var content: String
     var imgPath: String
+    
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -26,9 +27,10 @@ struct CustomCell: View, Identifiable {
                 TextView(text: title, textPattern: 3).foregroundColor(.text).padding(.leading, 10)
                 TextView(text: content, textPattern: 0).foregroundColor(.text).padding(.leading, 10)
             }
-            .frame(width: 150, height: 50, alignment: .leading)
-            .background(Color.white)
-            
+            .frame(width: 150, height: 40, alignment: .leading)
+            .background(Color.backGroundCellColor)
+            .mask(PartlyRoundedCornerView(cornerRadius: 20,
+                                              maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
         }
         //枠線
         .frame(width: 150, height: 152)
@@ -36,6 +38,23 @@ struct CustomCell: View, Identifiable {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.gray, lineWidth: 1)
         )
+    }
+}
+
+struct PartlyRoundedCornerView: UIViewRepresentable {
+    let cornerRadius: CGFloat
+    let maskedCorners: CACornerMask
+
+    func makeUIView(context: UIViewRepresentableContext<PartlyRoundedCornerView>) -> UIView {
+        // 引数で受け取った値を利用して、一部の角のみを丸くしたViewを作成する
+        let uiView = UIView()
+        uiView.layer.cornerRadius = cornerRadius
+        uiView.layer.maskedCorners = maskedCorners
+        uiView.backgroundColor = .white
+        return uiView
+    }
+
+    func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PartlyRoundedCornerView>) {
     }
 }
 
