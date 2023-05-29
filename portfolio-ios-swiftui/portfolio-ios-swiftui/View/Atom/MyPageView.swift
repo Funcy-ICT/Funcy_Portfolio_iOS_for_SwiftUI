@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MyPageView: View {
-    @State public var selectedIndex = 0
+    @State private var selectedIndex = 0
     
     var body: some View {
         VStack(){
