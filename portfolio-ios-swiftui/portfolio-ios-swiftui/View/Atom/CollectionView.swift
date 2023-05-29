@@ -23,11 +23,12 @@ struct CustomCell: View, Identifiable {
                 .cornerRadius(20)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(title).font(.system(size: 14)).padding(.leading, 10)
-                Text(content).font(.system(size: 14)).padding(.leading, 10)
+                TextView(text: title, textPattern: 3).foregroundColor(.text).padding(.leading, 10)
+                TextView(text: content, textPattern: 0).foregroundColor(.text).padding(.leading, 10)
             }
             .frame(width: 150, height: 50, alignment: .leading)
             .background(Color.white)
+            
         }
         //枠線
         .frame(width: 150, height: 152)

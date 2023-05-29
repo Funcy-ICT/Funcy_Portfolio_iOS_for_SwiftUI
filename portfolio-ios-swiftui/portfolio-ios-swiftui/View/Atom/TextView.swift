@@ -46,14 +46,14 @@ struct TextView: View {
 }
 
 // #if DEBUG
-// struct TextView_Previews: PreviewProvider {
-//    static var previews: some View {
-//
-//        VStack(spacing: 20) {
-//            TextView(text: "こんにちわ", textPattern: 0)
-//            TextView(text: "こんにちわ", textPattern: 1)
-//            TextView(text: "こんにちわ", textPattern: 2)
-//        }
-//    }
-// }
+ struct TextView_Previews: PreviewProvider {
+    static var previews: some View {
+
+        VStack(spacing: 20) {
+            TextView(text: "こんにちわ", textPattern: 0)
+            TextView(text: "こんにちわ", textPattern: 1)
+            TextView(text: "こんにちわ", textPattern: 2)
+        }
+    }
+ }
 // #endif
