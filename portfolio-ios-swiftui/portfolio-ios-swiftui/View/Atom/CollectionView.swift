@@ -27,7 +27,7 @@ struct CustomCell: View, Identifiable {
                 TextView(text: title, textPattern: 3).foregroundColor(.text).padding(.leading, 10)
                 TextView(text: content, textPattern: 0).foregroundColor(.text).padding(.leading, 10)
             }
-            .frame(width: 150, height: 40, alignment: .leading)
+            .frame(width: 150, height: 50, alignment: .leading)
             .background(Color.backGroundCellColor)
             .mask(PartlyRoundedCornerView(cornerRadius: 20,
                                               maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
@@ -36,7 +36,7 @@ struct CustomCell: View, Identifiable {
         .frame(width: 150, height: 152)
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.gray, lineWidth: 1)
+                .stroke(Color.white, lineWidth: 1)
         )
     }
 }
