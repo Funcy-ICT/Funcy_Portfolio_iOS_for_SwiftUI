@@ -39,11 +39,12 @@ struct CustomCell: View, Identifiable {
                 .stroke(Color.white, lineWidth: 1)
         )
         .onTapGesture {
-            let _ = print("tap")
+            let _ = print("tap: \(title)")
         }
     }
 }
 
+//文字背景の図形を角丸にするやつ
 struct PartlyRoundedCornerView: UIViewRepresentable {
     let cornerRadius: CGFloat
     let maskedCorners: CACornerMask
@@ -64,28 +65,15 @@ struct PartlyRoundedCornerView: UIViewRepresentable {
 struct CollectionView: View {
     // .fixed(item同士の間隔), count 横にいくつ表示するか
     var colums: [GridItem] = Array(repeating: .init(.fixed(165)), count: 2)
-
-    // 後々サーバから画像を取得
-    let data: [CustomCell] = [
-        CustomCell(title: "garden_strand", content: "ネックレス", imgPath: "garden_strand"),
-        CustomCell(title: "gatsby_hat", content: "ハット", imgPath: "gatsby_hat"),
-        CustomCell(title: "stella_sunglasses", content: "グラス", imgPath: "stella_sunglasses"),
-        CustomCell(title: "strut_earrings", content: "イヤリング", imgPath: "strut_earrings"),
-        CustomCell(title: "vagabond_sack", content: "リュックサック", imgPath: "vagabond_sack"),
-        CustomCell(title: "varsity_socks", content: "ソックス", imgPath: "varsity_socks"),
-        CustomCell(title: "whitey_belt", content: "ベルト", imgPath: "whitey_belt"),
-        CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack"),
-        CustomCell(title: "gilt_desk_trio", content: "小物入れ", imgPath: "gilt_desk_trio"),
-        CustomCell(title: "shrug_bag", content: "バッグ", imgPath: "shrug_bag")
-
-    ]
+    
+    let item: [CustomCell]
 
     var body: some View {
         ScrollView(.vertical) {
             LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
-                ForEach((0..<data.count), id: \.self) { num in
+                ForEach((0..<item.count), id: \.self) { num in
                     HStack {
-                        data[num]
+                        item[num]
                     }
                 }
             }
@@ -95,6 +83,18 @@ struct CollectionView: View {
 
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionView()
+        let data:[CustomCell] = [CustomCell(title: "garden_strand", content: "ネックレス", imgPath: "garden_strand"),
+                                    CustomCell(title: "gatsby_hat", content: "ハット", imgPath: "gatsby_hat"),
+                                    CustomCell(title: "stella_sunglasses", content: "グラス", imgPath: "stella_sunglasses"),
+                                    CustomCell(title: "strut_earrings", content: "イヤリング", imgPath: "strut_earrings"),
+                                    CustomCell(title: "vagabond_sack", content: "リュックサック", imgPath: "vagabond_sack"),
+                                    CustomCell(title: "varsity_socks", content: "ソックス", imgPath: "varsity_socks"),
+                                    CustomCell(title: "whitey_belt", content: "ベルト", imgPath: "whitey_belt"),
+                                    CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack"),
+                                    CustomCell(title: "gilt_desk_trio", content: "小物入れ", imgPath: "gilt_desk_trio"),
+                                    CustomCell(title: "shrug_bag", content: "バッグ", imgPath: "shrug_bag")
+                                ]
+        
+        CollectionView(item: data)
     }
 }
