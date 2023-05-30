@@ -38,6 +38,9 @@ struct CustomCell: View, Identifiable {
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.white, lineWidth: 1)
         )
+        .onTapGesture {
+            let _ = print("tap")
+        }
     }
 }
 
