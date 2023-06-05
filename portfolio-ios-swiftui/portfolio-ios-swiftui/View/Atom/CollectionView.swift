@@ -34,10 +34,10 @@ struct CustomCell: View, Identifiable {
         }
         //枠線
         .frame(width: 150, height: 152)
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.white, lineWidth: 1)
-        )
+        //.overlay(
+            //RoundedRectangle(cornerRadius: 20)
+                //.stroke(Color.white, lineWidth: 1)
+        //)
         .onTapGesture {
             let _ = print("tap: \(title)")
         }
