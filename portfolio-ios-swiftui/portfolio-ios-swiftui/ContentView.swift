@@ -9,12 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Image("IMG_6788")
-            .resizable()
-            .clipShape(Circle())
-            .scaledToFit()
-            .frame(width: 120.0, height: 100.0)
-            .position(x: 70, y: 70)
+        VStack(spacing: 20) {
+            TextBox(text: "メールアドレス", textFieldPattern: 0)
+            TextBox(text: "パスワード", textFieldPattern: 1)
+        }
     }
 }
 
