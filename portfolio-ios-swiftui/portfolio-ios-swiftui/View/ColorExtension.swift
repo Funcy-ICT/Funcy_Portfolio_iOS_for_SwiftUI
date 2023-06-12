@@ -16,4 +16,5 @@ extension Color {
     static let text = Color("subTextColor")
     static let subPink = Color("downSidePink")
     static let tabbarColor = Color("tabbarColor")
+    static let tagColor = Color("tagColor")
 }
