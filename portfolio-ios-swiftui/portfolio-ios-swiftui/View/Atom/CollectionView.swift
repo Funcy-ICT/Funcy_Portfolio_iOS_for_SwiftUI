@@ -13,7 +13,6 @@ struct CustomCell: View, Identifiable {
     var content: String
     var imgPath: String
     
-
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             Image(imgPath)
@@ -32,19 +31,15 @@ struct CustomCell: View, Identifiable {
             .mask(PartlyRoundedCornerView(cornerRadius: 20,
                                               maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
         }
-        //枠線
+        // 枠線
         .frame(width: 150, height: 152)
-        //.overlay(
-            //RoundedRectangle(cornerRadius: 20)
-                //.stroke(Color.white, lineWidth: 1)
-        //)
         .onTapGesture {
-            let _ = print("tap: \(title)")
+            print("tap: \(title)")
         }
     }
 }
 
-//文字背景の図形を角丸にするやつ
+// 文字背景の図形を角丸にするやつ
 struct PartlyRoundedCornerView: UIViewRepresentable {
     let cornerRadius: CGFloat
     let maskedCorners: CACornerMask
@@ -81,21 +76,25 @@ struct CollectionView: View {
     }
 }
 
+/*
+#if DEBUG
 struct CollectionView_Previews: PreviewProvider {
     static var previews: some View {
-        let data:[CustomCell] = [CustomCell(title: "garden_strand", content: "ネックレス", imgPath: "garden_strand"),
-                                    CustomCell(title: "gatsby_hat", content: "ハット", imgPath: "gatsby_hat"),
-                                    CustomCell(title: "stella_sunglasses", content: "グラス", imgPath: "stella_sunglasses"),
-                                    CustomCell(title: "strut_earrings", content: "イヤリング", imgPath: "strut_earrings"),
-                                    CustomCell(title: "vagabond_sack", content: "リュックサック", imgPath: "vagabond_sack"),
-                                    CustomCell(title: "varsity_socks", content: "ソックス", imgPath: "varsity_socks"),
-                                    CustomCell(title: "whitey_belt", content: "ベルト", imgPath: "whitey_belt"),
-                                    CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack"),
-                                    CustomCell(title: "gilt_desk_trio", content: "小物入れ", imgPath: "gilt_desk_trio"),
-                                    CustomCell(title: "shrug_bag", content: "バッグ", imgPath: "shrug_bag")
-                                ]
+        let data: [CustomCell] = [
+            CustomCell(title: "garden_strand", content: "ネックレス", imgPath: "garden_strand"),
+            CustomCell(title: "gatsby_hat", content: "ハット", imgPath: "gatsby_hat"),
+            CustomCell(title: "stella_sunglasses", content: "グラス", imgPath: "stella_sunglasses"),
+            CustomCell(title: "strut_earrings", content: "イヤリング", imgPath: "strut_earrings"),
+            CustomCell(title: "vagabond_sack", content: "リュックサック", imgPath: "vagabond_sack"),
+            CustomCell(title: "varsity_socks", content: "ソックス", imgPath: "varsity_socks"),
+            CustomCell(title: "whitey_belt", content: "ベルト", imgPath: "whitey_belt"),
+            CustomCell(title: "copper_wire_rack", content: "ラック", imgPath: "copper_wire_rack"),
+            CustomCell(title: "gilt_desk_trio", content: "小物入れ", imgPath: "gilt_desk_trio"),
+            CustomCell(title: "shrug_bag", content: "バッグ", imgPath: "shrug_bag")
+        ]
         
         CollectionView(item: data)
     }
 }
-
+#endif
+*/
