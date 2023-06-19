@@ -12,6 +12,7 @@ struct CustomCell: View, Identifiable {
     var title: String
     var content: String
     let urlString: String
+    let cellCornerRadius: CGFloat = 15
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -20,14 +21,26 @@ struct CustomCell: View, Identifiable {
                 if let image = phase.image {
                     image
                         .resizable()
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(width: 150, height: 100, alignment: .top)
                         .clipped()
-                        .cornerRadius(15)
+                        .mask(PartlyRoundedCornerView(
+                            cornerRadius: cellCornerRadius,
+                            maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner]))
+                        
                 } else if let error = phase.error {
                     let _ = print(error.localizedDescription)
+                } else {
+                    Rectangle()
+                        .fill(Color.white)
+                        .frame(width: 150, height: 100, alignment: .top)
+                        .clipped()
+                        .mask(PartlyRoundedCornerView(
+                            cornerRadius: cellCornerRadius,
+                            maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner]))
                 }
             }
+            
             .padding(.bottom, 50)
             VStack(alignment: .leading, spacing: 4) {
                 TextView(text: title, textPattern: 3).foregroundColor(.text).padding(.leading, 10)
@@ -35,8 +48,9 @@ struct CustomCell: View, Identifiable {
             }
             .frame(width: 150, height: 50, alignment: .leading)
             .background(Color.backGroundCellColor)
-            .mask(PartlyRoundedCornerView(cornerRadius: 15,
-                                              maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
+            .mask(PartlyRoundedCornerView(
+                cornerRadius: cellCornerRadius,
+                maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
         }
         // 枠線
         .frame(width: 150, height: 152)
@@ -95,17 +109,17 @@ struct CollectionView_Previews: PreviewProvider {
             CustomCell(
                 title: "bag",
                 content: "バッグ",
-                urlString: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg"
+                urlString: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740"
             ),
             CustomCell(
                 title: "bag",
                 content: "バッグ",
-                urlString: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg"
+                urlString: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg"
             ),
             CustomCell(
                 title: "bag",
                 content: "バッグ",
-                urlString: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg"
+                urlString: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg"
             )
         ]
         
