@@ -23,7 +23,7 @@ struct CustomCell: View, Identifiable {
                         .scaledToFit()
                         .frame(width: 150, height: 100, alignment: .top)
                         .clipped()
-                        .cornerRadius(20)
+                        .cornerRadius(15)
                 } else if let error = phase.error {
                     let _ = print(error.localizedDescription)
                 }
@@ -35,7 +35,7 @@ struct CustomCell: View, Identifiable {
             }
             .frame(width: 150, height: 50, alignment: .leading)
             .background(Color.backGroundCellColor)
-            .mask(PartlyRoundedCornerView(cornerRadius: 20,
+            .mask(PartlyRoundedCornerView(cornerRadius: 15,
                                               maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
         }
         // 枠線
