@@ -11,7 +11,7 @@ final class WorkDatailAPIService {
     
     static let shared = WorkDatailAPIService()
     
-    public func fetchWorkDatailService(articleID: Int) async throws -> WorkDatail {
+    public func fetchWorkDatailService(articleID: String) async throws -> WorkDatail {
         
         // MARK: - 1.API取得先URLの作成
         // 本番環境ではURLを変更する

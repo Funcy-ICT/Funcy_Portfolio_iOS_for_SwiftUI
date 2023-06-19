@@ -13,30 +13,38 @@ enum IconPattern {
 }
 
 struct IconView: View {
-
+    
     // Todo: 将来的にURLに置き換える
-    let imageName: String
+    let imageName: URL
     let iconPattern: IconPattern
-
+    
     var body: some View {
-
+        
         switch iconPattern {
-
+            
         case .large:
-            Image(imageName)
-                .resizable()
-                .clipShape(Circle())
-                .scaledToFit()
-                .frame(width: 148.0, height: 148.0)
-        // 74 × 2 = 148.0
-
+            AsyncImage(url: imageName) { image in
+                image
+                    .resizable()
+                    .clipShape(Circle())
+                    .scaledToFit()
+                    .frame(width: 148.0, height: 148.0)
+            } placeholder: {
+                ProgressView()
+            }
+            // 74 × 2 = 148.0
+            
         case .small:
-            Image(imageName)
-                .resizable()
-                .clipShape(Circle())
-                .scaledToFit()
-                .frame(width: 108.0, height: 108.0)
-        // 54 × 2 = 108.0
+            AsyncImage(url: imageName) { image in
+                image
+                    .resizable()
+                    .clipShape(Circle())
+                    .scaledToFit()
+                    .frame(width: 108.0, height: 108.0)
+            } placeholder: {
+                ProgressView()
+            }
+            // 54 × 2 = 108.0
         }
     }
 }
