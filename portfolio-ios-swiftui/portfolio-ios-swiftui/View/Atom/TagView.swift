@@ -21,20 +21,20 @@ struct TagView: View {
     }
 }
 
-#if DEBUG
-struct TagView_Previews: PreviewProvider {
-    static var previews: some View {
-        let item = ["hoge", "fuga", "piyo"]
-
-        HStack {
-            ForEach(0..<item.count, id: \.self) { index in
-                TagView(tag: item[index])
-                    .padding(.horizontal, 5)
-                    .onTapGesture {
-                        let _ = print("tap: \(item[index])") // 押された時のアクション
-                    }
-            }
-        }
-    }
-}
-#endif
+//#if DEBUG
+//struct TagView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let item = ["hoge", "fuga", "piyo"]
+//
+//        HStack {
+//            ForEach(0..<item.count, id: \.self) { index in
+//                TagView(tag: item[index])
+//                    .padding(.horizontal, 5)
+//                    .onTapGesture {
+//                        let _ = print("tap: \(item[index])") // 押された時のアクション
+//                    }
+//            }
+//        }
+//    }
+//}
+//#endif
