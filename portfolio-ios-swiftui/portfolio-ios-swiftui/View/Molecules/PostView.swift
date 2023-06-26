@@ -20,7 +20,7 @@ struct PostView: View {
                         .frame(width: 25, height: 40)
                         .foregroundColor(.gray)
                 }
-                IconView(imageName: "testpic", iconPattern: .small)
+                IconView(imageName: "", iconPattern: .small)
                 BaseButtonView(
                     action: { print("何か処理をするよー") },
                     labelText: "下書き",
