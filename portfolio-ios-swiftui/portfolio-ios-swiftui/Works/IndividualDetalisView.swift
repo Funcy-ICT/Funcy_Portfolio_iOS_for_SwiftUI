@@ -21,19 +21,21 @@ struct IndividualDetalisView: View {
         let mobileWidth = bounds.width * 1
         let mobileHeight = bounds.height * 0.3
         
-        VStack {
-            NavigationView {
+        NavigationView {
+            VStack {
                 ScrollView {
                     HStack {
                         IconView(imageName: workinfo.work.user_icon, iconPattern: .small)
+                            .shadow(radius: 10)
                         TextView(text: "\(workinfo.work.user_name)", textPattern: 1)
                     }
                     .frame(height: 54.0)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 20)
                     
-                    ImageSelectView(images: workinfo.work.images.compactMap{ $0.image })
+                    ImageSelectView(images: workinfo.work.images.compactMap { $0.image })
                         .padding(.top, -20)
+                        .shadow(radius: 10)
                     
                     VStack(alignment: .leading) {
                         TextView(text: workinfo.work.title, textPattern: 1)
@@ -75,31 +77,32 @@ struct IndividualDetalisView: View {
             }
             .frame(maxHeight: .infinity, alignment: .top)
             .padding(.top, 10)
-            .navigationBarTitle("Your Title", displayMode: .inline)
             .navigationBarItems(
                 leading: Button(action: {
-                    print("左のボタンが押されたよ")
+                    // 戻るアクションを追加してください
                 }) {
                     SwiftUI.Image(systemName: "chevron.backward")
                         .resizable()
                         .frame(height: 20.0)
                         .padding(.leading, 20)
+                        .foregroundColor(Color.gray)
                 },
                 trailing: Button(action: {
-                    print("右のボタンが押されたよ")
                 }) {
                     SwiftUI.Image(systemName: "square.and.pencil")
                         .resizable()
                         .frame(width: 20.0, height: 20.0)
                         .padding(.trailing, 15)
+                        .foregroundColor(Color.gray)
+                    
+                    SwiftUI.Image(systemName: "square.and.arrow.up")
+                        .resizable()
+                        .frame(width: 18.0, height: 23.0)
+                        .padding(.trailing, 15)
+                        .foregroundColor(Color.gray)
                 }
             )
+            
         }
     }
 }
-
-//struct IndividualDetalisView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        IndividualDetalisView()
-//    }
-//}
