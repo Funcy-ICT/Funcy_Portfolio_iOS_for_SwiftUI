@@ -8,13 +8,16 @@ import SwiftUI
 struct TextBox: View {
     @State private var inputText = ""
     let text: String
+    var width: CGFloat = 240
+    var height: CGFloat = 40
+    
     var body: some View {
 
         VStack(alignment: .leading) {
             Text(text)
                 .foregroundColor(Color.text)
             TextField("入力してください", text: $inputText)
-                .frame(width: 240, height: 40)
+                .frame(width: width, height: height)
                 .padding(.leading, 15)
                 .overlay(RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.grayBottonColor, lineWidth: 2)
