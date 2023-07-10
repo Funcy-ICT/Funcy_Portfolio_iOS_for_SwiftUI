@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0483FA3C290669BC001866C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483FA3B290669BC001866C9 /* IconView.swift */; };
+		0CB3E2402A498592008CD563 /* WorksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3E23F2A498592008CD563 /* WorksList.swift */; };
 		0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF733712A2DBB7200680560 /* CollectionView.swift */; };
 		0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */; };
 		AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		0483FA3B290669BC001866C9 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		0CB3E23F2A498592008CD563 /* WorksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksList.swift; sourceTree = "<group>"; };
 		0CF733712A2DBB7200680560 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingActionButtonView.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0CB3E23E2A498561008CD563 /* WorksList */ = {
+			isa = PBXGroup;
+			children = (
+				0CB3E23F2A498592008CD563 /* WorksList.swift */,
+			);
+			path = WorksList;
+			sourceTree = "<group>";
+		};
 		AA31E7FE290F9C5900DCE061 /* Organism */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +108,7 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				0CB3E23E2A498561008CD563 /* WorksList */,
 				ABB3AD30284DEA84004C012E /* View */,
 				ABC44B162918F62D00BBE1A6 /* Login */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
@@ -288,6 +299,7 @@
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
 				0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
+				0CB3E2402A498592008CD563 /* WorksList.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				ABC44B212918F62D00BBE1A6 /* LoginPage.swift in Sources */,

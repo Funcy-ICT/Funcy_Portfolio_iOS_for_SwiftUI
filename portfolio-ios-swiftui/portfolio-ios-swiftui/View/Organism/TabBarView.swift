@@ -19,22 +19,22 @@ struct TabBarView: View {
             TestView1() // メイン画面のView
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                    Text("検索")
+                    //Text("検索")
                 }
             TestView2() // マイページ（個人）のView
                 .tabItem {
                     Image(systemName: "person")
-                    Text("ユーザー")
+                    //Text("ユーザー")
                 }
             TestView1() // マイページ（グループ）のView
                 .tabItem {
                     Image(systemName: "person.3")
-                    Text("グループ")
+                    //Text("グループ")
                 }
             TestView2() // 設定画面のView
                 .tabItem {
                     Image(systemName: "gearshape")
-                    Text("設定")
+                    //Text("設定")
                 }
         }.accentColor(.textPinkColor)
     }
