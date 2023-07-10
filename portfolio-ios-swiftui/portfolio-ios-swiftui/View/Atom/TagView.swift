@@ -7,34 +7,57 @@
 
 import SwiftUI
 
+enum ViewPattern {
+    case main
+    case detail
+}
+
 struct TagView: View {
-    let tag: String
+    //let tag: String
+    var item = [String]()
+    let viewPattern: ViewPattern
     
     var body: some View {
-        TextView(text: tag, textPattern: 0)
-            .frame(width: 100, height: 25)
-            .foregroundColor(Color.black)   // 後から文字色変更
-            .overlay(
-                RoundedRectangle(cornerRadius: 25)
-                .stroke(Color.tagColor, lineWidth: 1)
-            )
+        switch viewPattern {
+        case .main:
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(0..<item.count, id: \.self) { index in
+                        TextView(text: item[index], textPattern: 0)
+                            .frame(width: 100, height: 25)
+                            .foregroundColor(Color.black)   // 後から文字色変更
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.tagColor, lineWidth: 1)
+                            )
+                    }
+                }
+            }
+            
+        case .detail:
+            HStack {
+                ForEach(0..<item.count, id: \.self) { index in
+                    TextView(text: item[index], textPattern: 0)
+                        .frame(width: 100, height: 25)
+                        .foregroundColor(Color.black)   // 後から文字色変更
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 25)
+                                .stroke(Color.tagColor, lineWidth: 1)
+                        )
+                }
+            }
+        }
+        
     }
 }
 
-//#if DEBUG
-//struct TagView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let item = ["hoge", "fuga", "piyo"]
-//
-//        HStack {
-//            ForEach(0..<item.count, id: \.self) { index in
-//                TagView(tag: item[index])
-//                    .padding(.horizontal, 5)
-//                    .onTapGesture {
-//                        let _ = print("tap: \(item[index])") // 押された時のアクション
-//                    }
-//            }
-//        }
-//    }
-//}
-//#endif
+#if DEBUG
+struct TagView_Previews: PreviewProvider {
+    static var previews: some View {
+        let item = ["hoge", "fuga", "piyo", "hogehoge"]
+            
+        TagView(item: item, viewPattern: .main)
+        
+    }
+}
+#endif
