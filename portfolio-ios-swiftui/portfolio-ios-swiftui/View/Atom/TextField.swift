@@ -27,8 +27,12 @@ struct TextBox: View {
     }
 }
 
-struct TextBox_Previews: PreviewProvider {
-    static var previews: some View {
-        TextBox(text: "メールアドレス")
-    }
-}
+// // if DEBUG
+//
+//struct TextBox_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TextBox(text: "メールアドレス")
+//    }
+//}
+//
+// // end if
