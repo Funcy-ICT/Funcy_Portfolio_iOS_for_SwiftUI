@@ -31,7 +31,12 @@ struct TextBox: View {
 //
 //struct TextBox_Previews: PreviewProvider {
 //    static var previews: some View {
-//        TextBox(text: "メールアドレス")
+//        VStack{
+//            TextBox(text: "メールアドレス")
+//            TextBox(text: "メールアドレス", width: 300)
+//            TextBox(text: "メールアドレス", height: 80)
+//            TextBox(text: "メールアドレス", width: 200, height: 200)
+//        }
 //    }
 //}
 //
