@@ -17,6 +17,7 @@ struct TextBox: View {
             Text(text)
                 .foregroundColor(Color.text)
             TextField("入力してください", text: $inputText)
+                .autocapitalization(.none)
                 .frame(width: width, height: height)
                 .padding(.leading, 15)
                 .overlay(RoundedRectangle(cornerRadius: 20)
@@ -27,8 +28,7 @@ struct TextBox: View {
     }
 }
 
-// // if DEBUG
-//
+//#if DEBUG
 //struct TextBox_Previews: PreviewProvider {
 //    static var previews: some View {
 //        VStack {
@@ -39,5 +39,4 @@ struct TextBox: View {
 //        }
 //    }
 //}
-//
-// // end if
+//#endif
