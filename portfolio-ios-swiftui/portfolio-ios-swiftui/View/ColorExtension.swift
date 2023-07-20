@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 extension Color {
-
     static let fabColor = Color("secondaryColor")
     static let grayBottonColor = Color("backgroundGray")
     static let textPinkColor = Color("upSidePink")
@@ -18,4 +17,5 @@ extension Color {
     static let tabbarColor = Color("tabbarColor")
     static let text = Color("textColor")
     static let backGroundCellColor = Color("backGroundCellColor")
+    static let tagColor = Color("tagColor")
 }
