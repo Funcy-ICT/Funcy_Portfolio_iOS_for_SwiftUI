@@ -46,6 +46,7 @@ struct WorksList: View {
                 TextField("search", text: $searchText)
                     .padding(8)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .autocapitalization(.none)
                 
                 ForEach(searchResults, id: \.self) { tag in
                     VStack(alignment: .leading) {
