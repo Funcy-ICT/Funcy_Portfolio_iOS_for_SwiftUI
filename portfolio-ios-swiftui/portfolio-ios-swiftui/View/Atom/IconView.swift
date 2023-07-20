@@ -28,24 +28,21 @@ struct IconView: View {
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 148.0, height: 148.0)
-            // 74 × 2 = 148.0
+                .frame(width: 74.0, height: 74.0)
             
         case .small:
             Image(imageName)
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 108.0, height: 108.0)
-            // 54 × 2 = 108.0
+                .frame(width: 54.0, height: 54.0)
             
         case .tiny:
             Image(imageName)
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 68.0, height: 68.0)
-            // 34 × 2 = 68.0
+                .frame(width: 40.0, height: 40.0)
         }
     }
 }
