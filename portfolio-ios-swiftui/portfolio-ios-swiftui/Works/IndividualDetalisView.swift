@@ -76,7 +76,6 @@ struct IndividualDetalisView: View {
                 }
             }
             .frame(maxHeight: .infinity, alignment: .top)
-            .padding(.top, 10)
             .navigationBarItems(
                 leading: Button(action: {
                     // 戻るアクションを追加してください
@@ -84,7 +83,6 @@ struct IndividualDetalisView: View {
                     SwiftUI.Image(systemName: "chevron.backward")
                         .resizable()
                         .frame(height: 20.0)
-                        .padding(.leading, 20)
                         .foregroundColor(Color.gray)
                 },
                 trailing: Button(action: {
@@ -98,11 +96,9 @@ struct IndividualDetalisView: View {
                     SwiftUI.Image(systemName: "square.and.arrow.up")
                         .resizable()
                         .frame(width: 18.0, height: 23.0)
-                        .padding(.trailing, 15)
                         .foregroundColor(Color.gray)
                 }
             )
-            
         }
     }
 }
