@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WorksList: View {
-    let names = ["Holly", "Josh", "Rhonda", "Ted"]
+    let tags = ["Hoge", "fuga", "piyo"]
     @State private var searchText = ""
     
     var body: some View {
@@ -35,34 +35,47 @@ struct WorksList: View {
             )
         ]
         
-        VStack {
-            NavigationView {
-                List {
-                    ForEach(searchResults, id: \.self) { name in
-                        NavigationLink(destination: Text(name)) {
-                            Text(name)
-                        }
-                    }
-                    .searchable(text: $searchText)
-                }
-            }
-            CollectionView(item: data)
-            TabBarView()
-                .previewInterfaceOrientation(.portrait)
+        /*
+        var filterWord: [String] {
+            return tags.filter {$0.uppercased().contains(searchText.uppercased())}
         }
+         */
+        
+        ZStack(alignment: .bottomTrailing) {
+            VStack {
+                TextField("search", text: $searchText)
+                    .padding(8)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                ForEach(searchResults, id: \.self) { tag in
+                    VStack(alignment: .leading) {
+                        Text(tag).padding(.leading, 12)
+                        Divider()
+                    }
+                }
+                CollectionView(item: data)
+            }
+            FloatingActionButtonView()
+        }
+        
     }
     
     var searchResults: [String] {
+        /*
         if searchText.isEmpty {
-            return names
+            return tags
         } else {
-            return names.filter { $0.contains(searchText) }
+            return tags.filter { $0.contains(searchText) }
         }
+         */
+        return tags.filter { $0.contains(searchText) }
     }
 }
 
+#if DEBUG
 struct WorksList_Previews: PreviewProvider {
     static var previews: some View {
         WorksList()
     }
 }
+#endif
