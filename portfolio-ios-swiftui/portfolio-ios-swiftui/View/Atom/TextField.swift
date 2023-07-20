@@ -12,7 +12,7 @@ struct TextBox: View {
     var height: CGFloat = 40
     
     var body: some View {
-
+        
         VStack(alignment: .leading) {
             Text(text)
                 .foregroundColor(Color.text)
@@ -20,7 +20,7 @@ struct TextBox: View {
                 .frame(width: width, height: height)
                 .padding(.leading, 15)
                 .overlay(RoundedRectangle(cornerRadius: 20)
-                            .stroke(Color.grayBottonColor, lineWidth: 2)
+                    .stroke(Color.grayBottonColor, lineWidth: 2)
                 )
                 .padding(.leading, 25)
         }
@@ -31,7 +31,7 @@ struct TextBox: View {
 //
 //struct TextBox_Previews: PreviewProvider {
 //    static var previews: some View {
-//        VStack{
+//        VStack {
 //            TextBox(text: "メールアドレス")
 //            TextBox(text: "メールアドレス", width: 300)
 //            TextBox(text: "メールアドレス", height: 80)
