@@ -15,6 +15,7 @@
 		AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FB28F542D900DCE061 /* TestView2.swift */; };
 		AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */; };
 		AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */; };
+		AB1FDCC52A6F8EE6006E0AA1 /* WorkPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1FDCC42A6F8EE6006E0AA1 /* WorkPostView.swift */; };
 		AB27895C2A1B4A540013C829 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27895B2A1B4A540013C829 /* ImageSelectView.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
@@ -41,6 +42,7 @@
 		AA31E7FB28F542D900DCE061 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
+		AB1FDCC42A6F8EE6006E0AA1 /* WorkPostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkPostView.swift; path = "portfolio-ios-swiftui/View/Molecules/WorkPostView.swift"; sourceTree = SOURCE_ROOT; };
 		AB27895B2A1B4A540013C829 /* ImageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,38 @@
 			path = Organism;
 			sourceTree = "<group>";
 		};
+		AB1FDCC32A6F8ED7006E0AA1 /* WorkPost */ = {
+			isa = PBXGroup;
+			children = (
+				AB1FDCC82A6F8F32006E0AA1 /* ViewModel */,
+				AB1FDCC72A6F8F23006E0AA1 /* Service */,
+				AB1FDCC62A6F8F16006E0AA1 /* Model */,
+				AB1FDCC42A6F8EE6006E0AA1 /* WorkPostView.swift */,
+			);
+			path = WorkPost;
+			sourceTree = "<group>";
+		};
+		AB1FDCC62A6F8F16006E0AA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AB1FDCC72A6F8F23006E0AA1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AB1FDCC82A6F8F32006E0AA1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		ABAF1D0C283B78F100F890BC = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +132,7 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				AB1FDCC32A6F8ED7006E0AA1 /* WorkPost */,
 				ABB3AD30284DEA84004C012E /* View */,
 				ABC44B162918F62D00BBE1A6 /* Login */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
@@ -287,6 +322,7 @@
 				AB27895C2A1B4A540013C829 /* ImageSelectView.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
 				0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */,
+				AB1FDCC52A6F8EE6006E0AA1 /* WorkPostView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
