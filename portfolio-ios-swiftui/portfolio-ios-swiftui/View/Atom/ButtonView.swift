@@ -9,18 +9,24 @@ import SwiftUI
 struct BaseButtonView: View {
     var action: () -> Void
     var labelText: String
+    var textSize: CGFloat?
     var foregroundColor: Color
     var backgroundColor: Color
     var radius: CGFloat
     var lineColor: Color
+    var width: CGFloat?
+    var height: CGFloat?
 
-    init(action: @escaping () -> Void, labelText: String, foregroundColor: Color, backgroundColor: Color, radius: CGFloat? = 0, lineColor: Color? = Color.clear) {
+    init(action: @escaping () -> Void, labelText: String, textSize: CGFloat? = nil, foregroundColor: Color, backgroundColor: Color, radius: CGFloat? = 0, lineColor: Color? = Color.clear, width: CGFloat? = nil, height: CGFloat? = nil) {
         self.action = action
         self.labelText = labelText
+        self.textSize = textSize
         self.backgroundColor = backgroundColor
         self.foregroundColor = foregroundColor
         self.radius = radius ?? 0
         self.lineColor = lineColor ?? Color.clear
+        self.width = width
+        self.height = height
     }
 
     private func getWidthSize(text: String) -> CGFloat {
@@ -48,8 +54,8 @@ struct BaseButtonView: View {
             let widthSize = getWidthSize(text: words)
 
             Text(words)
-                .font(.system(size: 20))
-                .frame(width: widthSize, height: 50)
+                .font(.system(size: textSize ?? 20))
+                .frame(width: width ?? getWidthSize(text: words), height: height ?? 50)
                 .lineLimit(1)
                 .foregroundColor(foregroundColor)
                 .background(backgroundColor)
@@ -83,7 +89,14 @@ struct CommonButtonView_Previews: PreviewProvider {
                 foregroundColor: Color.text,
                 backgroundColor: Color.grayBottonColor, radius: 25
             )
-
+            BaseButtonView(
+                action: { print("何か処理をするよー") },
+                labelText: "投稿",
+                textSize: 15,
+                foregroundColor: Color.white,
+                backgroundColor: Color.subPink, radius: 25,
+                height: 40
+            )
         }
     }
 }
