@@ -17,6 +17,8 @@
 		AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */; };
 		AB58414F299B520F00FD9493 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB58414E299B520F00FD9493 /* YouTubePlayerKit */; };
 		AB633C8A299F1A2100F57244 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB633C89299F1A2100F57244 /* ImageSelectView.swift */; };
+		AB73167F2A691F26006BB78A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73167E2A691F26006BB78A /* TagView.swift */; };
+		AB7316812A6920B5006BB78A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7316802A6920B5006BB78A /* ColorExtension.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
 		ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1C283B78F800F890BC /* Assets.xcassets */; };
@@ -32,7 +34,6 @@
 		ABC44B252918F62D00BBE1A6 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B1F2918F62D00BBE1A6 /* LoginService.swift */; };
 		ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B262918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift */; };
 		ABDA951F286996FA00C7C735 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA951E286996FA00C7C735 /* TextView.swift */; };
-		FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06F9E8288E85110016E401 /* ColorExtension.swift */; };
 		FC7EC30D28EAC89300600302 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EC30C28EAC89300600302 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,8 @@
 		AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualDetalisView.swift; sourceTree = "<group>"; };
 		AB633C81299F10F300F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
 		AB633C89299F1A2100F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
+		AB73167E2A691F26006BB78A /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		AB7316802A6920B5006BB78A /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D1A283B78F100F890BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,7 +67,6 @@
 		ABC44B1F2918F62D00BBE1A6 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		ABC44B262918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = portfolio_ios_swiftuiApp.swift; sourceTree = "<group>"; };
 		ABDA951E286996FA00C7C735 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		FC06F9E8288E85110016E401 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FC7EC30C28EAC89300600302 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,10 +161,10 @@
 		ABB3AD30284DEA84004C012E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AB7316802A6920B5006BB78A /* ColorExtension.swift */,
 				AB633C83299F153A00F57244 /* Molecules */,
 				AA31E7FE290F9C5900DCE061 /* Organism */,
 				ABDA9519286994B600C7C735 /* Atom */,
-				FC06F9E8288E85110016E401 /* ColorExtension.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +238,7 @@
 				0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */,
 				FC7EC30C28EAC89300600302 /* TextField.swift */,
 				AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */,
+				AB73167E2A691F26006BB78A /* TagView.swift */,
 				AA31E7F928F542C700DCE061 /* TestView1.swift */,
 				AA31E7FB28F542D900DCE061 /* TestView2.swift */,
 				AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */,
@@ -344,6 +347,7 @@
 				ABC44B232918F62D00BBE1A6 /* User.swift in Sources */,
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
 				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
+				AB7316812A6920B5006BB78A /* ColorExtension.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */,
 				ABBA76A3299DD2570061CD50 /* WorkDatailAPIService.swift in Sources */,
@@ -358,12 +362,12 @@
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
 				AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */,
 				ABC44B242918F62D00BBE1A6 /* APIServiceError.swift in Sources */,
-				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
 				ABC44B202918F62D00BBE1A6 /* LoginViewModel.swift in Sources */,
 				ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
 				AB633C8A299F1A2100F57244 /* ImageSelectView.swift in Sources */,
 				ABC44B222918F62D00BBE1A6 /* Auth.swift in Sources */,
+				AB73167F2A691F26006BB78A /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

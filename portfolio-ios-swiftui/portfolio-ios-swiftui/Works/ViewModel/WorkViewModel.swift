@@ -14,10 +14,9 @@ class WorkViewModel: ObservableObject {
     @Published var articleID: ArticleID
     
     init() {
-        let defaultImageURL = URL(string: "http://localhost:3000/2a9d4ce5-9dec-410c-8cdd-9eea59e4c18fmaxresdefault.jpg")!
-        let defaultWorkURL = URL(string: "https://github.com/zekuta-x")!
+        let defaultImageURL = URL(string: "http://localhost:3004/2a9d4ce5-9dec-410c-8cdd-9eea59e4c18fmaxresdefault.jpg")!
+        let defaultWorkURL = URL(string: "https://github.com")!
         let defaultMovieURL = URL(string: "https://www.youtube.com/watch?v=PupqolMfdqI")!
-        
         
         self.work = WorkDatail(title: "",
                                description: "",
@@ -29,7 +28,7 @@ class WorkViewModel: ObservableObject {
                                movie_url: defaultMovieURL,
                                security: 1
         )
-        self.articleID = ArticleID(articleID: "bfd9b359-6185-434f-80f9-8ea7f0f00980")
+        self.articleID = ArticleID(articleID: "f9cdde7e-ccea-4f69-aea1-f291cfefa223")
     }
     
     func fetchWorkDatailService() {

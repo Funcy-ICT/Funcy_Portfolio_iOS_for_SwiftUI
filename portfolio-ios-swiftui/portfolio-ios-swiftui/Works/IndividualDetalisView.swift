@@ -46,6 +46,10 @@ struct IndividualDetalisView: View {
                         TextView(text: "\(workinfo.work.description)", textPattern: 0)
                             .padding(.bottom, 20)
                         
+                        TagView(item: workinfo.work.tags.compactMap { $0.tag }, viewPattern: .detail)
+                            .padding(.bottom, 25)
+                        
+                        
                         // work_urlに変える
                         Link(destination: workinfo.work.work_url) {
                             SwiftUI.Image("github")
@@ -85,19 +89,25 @@ struct IndividualDetalisView: View {
                         .frame(height: 20.0)
                         .foregroundColor(Color.gray)
                 },
-                trailing: Button(action: {
-                }) {
-                    SwiftUI.Image(systemName: "square.and.pencil")
-                        .resizable()
-                        .frame(width: 20.0, height: 20.0)
-                        .padding(.trailing, 15)
-                        .foregroundColor(Color.gray)
-                    
-                    SwiftUI.Image(systemName: "square.and.arrow.up")
-                        .resizable()
-                        .frame(width: 18.0, height: 23.0)
-                        .foregroundColor(Color.gray)
-                }
+                trailing:
+                    HStack{
+                        Button(action: {
+                            // アクションを追加してください
+                        }) {
+                            SwiftUI.Image(systemName: "square.and.pencil")
+                                .resizable()
+                                .frame(width: 20.0, height: 20.0)
+                                .foregroundColor(Color.gray)
+                        }
+                        Button(action: {
+                            // アクションを追加してください
+                        }) {
+                            SwiftUI.Image(systemName: "square.and.arrow.up")
+                                .resizable()
+                                .frame(width: 18.0, height: 23.0)
+                                .foregroundColor(Color.gray)
+                        }
+                    }
             )
         }
     }
