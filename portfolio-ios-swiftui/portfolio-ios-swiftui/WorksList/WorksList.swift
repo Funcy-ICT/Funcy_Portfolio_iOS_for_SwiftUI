@@ -50,8 +50,11 @@ struct WorksList: View {
                 
                 ForEach(searchResults, id: \.self) { tag in
                     VStack(alignment: .leading) {
+                        /*
                         Text(tag).padding(.leading, 12)
                         Divider()
+                         */
+                        TagView(item: [tag], viewPattern: .detail)
                     }
                 }
                 CollectionView(item: data)
