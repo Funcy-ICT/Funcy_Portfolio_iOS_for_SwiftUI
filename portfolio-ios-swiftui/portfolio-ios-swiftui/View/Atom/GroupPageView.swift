@@ -10,7 +10,7 @@ import SwiftUI
 struct GroupPageView: View {
     @State private var selectedIndex = 0
     var body: some View {
-        VStack(){
+        VStack {
             Picker("", selection: self.$selectedIndex) {
                 Text("作品一覧").tag(0)
                 Text("グループ紹介").tag(1)
@@ -21,10 +21,10 @@ struct GroupPageView: View {
             switch selectedIndex {
             case 0:
                 Text("hoge")    // 後ほどアクションを定義
-                //ここで作品一覧の子ビューを呼び出し
+                // ここで作品一覧の子ビューを呼び出し
             default:
                 Text("piyo")
-                //ここでスキルの子ビューを呼び出し
+                // ここでスキルの子ビューを呼び出し
             }
         }
     }

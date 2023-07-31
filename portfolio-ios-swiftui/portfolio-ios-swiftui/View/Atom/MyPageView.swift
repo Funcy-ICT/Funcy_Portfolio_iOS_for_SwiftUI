@@ -11,7 +11,7 @@ struct MyPageView: View {
     @State private var selectedIndex = 0
     
     var body: some View {
-        VStack(){
+        VStack {
             Picker("", selection: self.$selectedIndex) {
                 Text("作品一覧").tag(0)
                 Text("プロフィール").tag(1)
@@ -23,13 +23,13 @@ struct MyPageView: View {
             switch selectedIndex {
             case 0:
                 Text("hoge")    // 後ほどアクションを定義
-                //ここで作品一覧の子ビューを呼び出し
+                // ここで作品一覧の子ビューを呼び出し
             case 1:
                 Text("fuga")
-                //ここでプロフィールの子ビューを呼び出し
+                // ここでプロフィールの子ビューを呼び出し
             default:
                 Text("piyo")
-                //ここでスキルの子ビューを呼び出し
+                // ここでスキルの子ビューを呼び出し
             }
         }
     }
