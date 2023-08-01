@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0483FA3C290669BC001866C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483FA3B290669BC001866C9 /* IconView.swift */; };
+		0CD869B42A2485400024F0BA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD869B32A2485400024F0BA /* MyPageView.swift */; };
+		0CD869B62A2497D90024F0BA /* GroupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD869B52A2497D90024F0BA /* GroupPageView.swift */; };
 		0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF733712A2DBB7200680560 /* CollectionView.swift */; };
 		0CF733742A36FA2000680560 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF733732A36FA2000680560 /* TagView.swift */; };
 		0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		0483FA3B290669BC001866C9 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		0CD869B32A2485400024F0BA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		0CD869B52A2497D90024F0BA /* GroupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPageView.swift; sourceTree = "<group>"; };
 		0CF733712A2DBB7200680560 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		0CF733732A36FA2000680560 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				AA31E7F928F542C700DCE061 /* TestView1.swift */,
 				AA31E7FB28F542D900DCE061 /* TestView2.swift */,
 				AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */,
+				0CD869B32A2485400024F0BA /* MyPageView.swift */,
+				0CD869B52A2497D90024F0BA /* GroupPageView.swift */,
 				0CF733712A2DBB7200680560 /* CollectionView.swift */,
 				0CF733732A36FA2000680560 /* TagView.swift */,
 			);
@@ -289,6 +295,7 @@
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AB27895C2A1B4A540013C829 /* ImageSelectView.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
+				0CD869B62A2497D90024F0BA /* GroupPageView.swift in Sources */,
 				0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
 				0CF733742A36FA2000680560 /* TagView.swift in Sources */,
@@ -302,6 +309,7 @@
 				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
 				ABC44B202918F62D00BBE1A6 /* LoginViewModel.swift in Sources */,
 				ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */,
+				0CD869B42A2485400024F0BA /* MyPageView.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
 				ABC44B222918F62D00BBE1A6 /* Auth.swift in Sources */,
 			);
