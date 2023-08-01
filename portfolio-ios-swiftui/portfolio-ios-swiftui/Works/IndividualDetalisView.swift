@@ -25,9 +25,9 @@ struct IndividualDetalisView: View {
             VStack {
                 ScrollView {
                     HStack {
-                        IconView(imageName: workinfo.work.user_icon, iconPattern: .small)
+                        IconView(imageName: workinfo.work.icon, iconPattern: .small)
                             .shadow(radius: 10)
-                        TextView(text: "\(workinfo.work.user_name)", textPattern: 1)
+                        TextView(text: "\(workinfo.work.userName)", textPattern: 1)
                     }
                     .frame(height: 54.0)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -49,9 +49,7 @@ struct IndividualDetalisView: View {
                         TagView(item: workinfo.work.tags.compactMap { $0.tag }, viewPattern: .detail)
                             .padding(.bottom, 25)
                         
-                        
-                        // work_urlに変える
-                        Link(destination: workinfo.work.work_url) {
+                        Link(destination: workinfo.work.work) {
                             SwiftUI.Image("github")
                                 .resizable()
                                 .frame(width: 45, height: 45)
@@ -64,7 +62,7 @@ struct IndividualDetalisView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(20)
                     
-                    YouTubePlayerView(YouTubePlayer(stringLiteral: "\(workinfo.work.movie_url)")) { state in
+                    YouTubePlayerView(YouTubePlayer(stringLiteral: "\(workinfo.work.movie)")) { state in
                         switch state {
                         case .idle:
                             ProgressView()
@@ -90,7 +88,7 @@ struct IndividualDetalisView: View {
                         .foregroundColor(Color.gray)
                 },
                 trailing:
-                    HStack{
+                    HStack {
                         Button(action: {
                             // アクションを追加してください
                         }) {

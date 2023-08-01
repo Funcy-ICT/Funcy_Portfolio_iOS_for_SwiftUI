@@ -22,10 +22,10 @@ class WorkViewModel: ObservableObject {
                                description: "",
                                images: [Image(image: defaultImageURL)],
                                tags: [Tag(tag: "")],
-                               user_icon: defaultImageURL,
-                               user_name: "",
-                               work_url: defaultWorkURL,
-                               movie_url: defaultMovieURL,
+                               icon: defaultImageURL,
+                               userName: "",
+                               work: defaultWorkURL,
+                               movie: defaultMovieURL,
                                security: 1
         )
         self.articleID = ArticleID(articleID: "f9cdde7e-ccea-4f69-aea1-f291cfefa223")

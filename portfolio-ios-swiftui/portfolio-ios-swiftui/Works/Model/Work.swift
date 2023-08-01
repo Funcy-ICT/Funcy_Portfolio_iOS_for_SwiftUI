@@ -20,11 +20,23 @@ struct WorkDatail: Codable {
     let description: String
     let images: [Image]
     let tags: [Tag]
-    let user_icon: URL
-    let user_name: String
-    let work_url: URL
-    let movie_url: URL
+    let icon: URL
+    let userName: String
+    let work: URL
+    let movie: URL
     let security: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case description
+        case images
+        case tags
+        case icon = "user_icon"
+        case userName = "user_name"
+        case work = "work_url"
+        case movie = "movie_url"
+        case security
+      }
 }
 
 struct ArticleID: Codable {
