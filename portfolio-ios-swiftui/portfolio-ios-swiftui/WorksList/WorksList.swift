@@ -14,6 +14,11 @@ struct WorksList: View {
     var body: some View {
         let data: [CustomCell] = [
             CustomCell(
+                title: "くま出没注意",
+                content: "まっすー",
+                urlString: "https://funcy.tennkyustudio.com/images/499468f2-7625-44c8-91b3-f0f2fc945cfakumaFix.jpeg"
+            ),
+            CustomCell(
                 title: "bag",
                 content: "バッグ",
                 urlString: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg"

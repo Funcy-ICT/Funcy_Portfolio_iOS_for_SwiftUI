@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TestView2: View {
     var body: some View {
-        Text("group")
+        Text("setting")
     }
 }
 
