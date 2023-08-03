@@ -47,14 +47,14 @@ struct IconView: View {
     }
 }
 
- #if DEBUG
- struct IconView_Previews: PreviewProvider {
-    static var previews: some View {
-        VStack {
-            IconView(imageName: "preview", iconPattern: .large)
-            IconView(imageName: "preview", iconPattern: .small)
-            IconView(imageName: "preview", iconPattern: .tiny)
-        }
-    }
- }
- #endif
+// #if DEBUG
+// struct IconView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        VStack {
+//            IconView(imageName: "preview", iconPattern: .large)
+//            IconView(imageName: "preview", iconPattern: .small)
+//            IconView(imageName: "preview", iconPattern: .tiny)
+//        }
+//    }
+// }
+// #endif
