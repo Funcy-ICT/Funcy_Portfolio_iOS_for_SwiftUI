@@ -10,7 +10,7 @@
 		0483FA3C290669BC001866C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483FA3B290669BC001866C9 /* IconView.swift */; };
 		0C862E002A7ADEE200BBA9A4 /* WorksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C862DFF2A7ADEE200BBA9A4 /* WorksListViewModel.swift */; };
 		0C862E022A7ADF9700BBA9A4 /* WorksListAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C862E012A7ADF9700BBA9A4 /* WorksListAPIService.swift */; };
-		0CB3E2402A498592008CD563 /* WorksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3E23F2A498592008CD563 /* WorksList.swift */; };
+		0CB3E2402A498592008CD563 /* WorksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3E23F2A498592008CD563 /* WorksListView.swift */; };
 		0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF733712A2DBB7200680560 /* CollectionView.swift */; };
 		0CF733742A36FA2000680560 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF733732A36FA2000680560 /* TagView.swift */; };
 		0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */; };
@@ -40,7 +40,7 @@
 		0483FA3B290669BC001866C9 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		0C862DFF2A7ADEE200BBA9A4 /* WorksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksListViewModel.swift; sourceTree = "<group>"; };
 		0C862E012A7ADF9700BBA9A4 /* WorksListAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksListAPIService.swift; sourceTree = "<group>"; };
-		0CB3E23F2A498592008CD563 /* WorksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksList.swift; sourceTree = "<group>"; };
+		0CB3E23F2A498592008CD563 /* WorksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksListView.swift; sourceTree = "<group>"; };
 		0CF733712A2DBB7200680560 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		0CF733732A36FA2000680560 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 				0C862DFE2A7ADEA200BBA9A4 /* Service */,
 				0C862DFD2A7ADE9600BBA9A4 /* Model */,
 				0C862DFC2A7ADE8300BBA9A4 /* ViewModel */,
-				0CB3E23F2A498592008CD563 /* WorksList.swift */,
+				0CB3E23F2A498592008CD563 /* WorksListView.swift */,
 			);
 			path = WorksList;
 			sourceTree = "<group>";
@@ -335,7 +335,7 @@
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
 				0C862E022A7ADF9700BBA9A4 /* WorksListAPIService.swift in Sources */,
 				0CF733742A36FA2000680560 /* TagView.swift in Sources */,
-				0CB3E2402A498592008CD563 /* WorksList.swift in Sources */,
+				0CB3E2402A498592008CD563 /* WorksListView.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				ABC44B212918F62D00BBE1A6 /* LoginPage.swift in Sources */,

@@ -5,6 +5,7 @@
 //  Created by 鳥山英峻 on 2023/02/16.
 //
 
+/*
 import Foundation
 
 final class WorkDatailAPIService {
@@ -29,3 +30,4 @@ final class WorkDatailAPIService {
         return response
     }
 }
+*/

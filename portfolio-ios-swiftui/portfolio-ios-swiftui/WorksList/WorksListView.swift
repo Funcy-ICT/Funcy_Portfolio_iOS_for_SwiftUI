@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct WorksList: View {
+struct WorksListView: View {
     let tags = ["Hoge", "fuga", "piyo"]
     @State private var searchText = ""
     
@@ -82,9 +82,9 @@ struct WorksList: View {
 }
 
 #if DEBUG
-struct WorksList_Previews: PreviewProvider {
+struct WorksListView_Previews: PreviewProvider {
     static var previews: some View {
-        WorksList()
+        WorksListView()
     }
 }
 #endif

@@ -16,7 +16,7 @@ struct TabBarView: View {
 
     var body: some View {
         TabView {
-            WorksList() // メイン画面のView
+            WorksListView() // メイン画面のView
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
