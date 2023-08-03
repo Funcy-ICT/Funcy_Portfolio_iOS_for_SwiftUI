@@ -42,19 +42,19 @@ struct IconView: View {
                 .resizable()
                 .clipShape(Circle())
                 .scaledToFit()
-                .frame(width: 40.0, height: 40.0)
+                .frame(width: 44.0, height: 44.0)
         }
     }
 }
 
-// #if DEBUG
-// struct IconView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VStack{
-//            IconView(imageName: "preview", iconPattern: .large)
-//            IconView(imageName: "preview", iconPattern: .small)
-//            IconView(imageName: "preview", iconPattern: .tiny)
-//        }
-//    }
-// }
-// #endif
+ #if DEBUG
+ struct IconView_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            IconView(imageName: "preview", iconPattern: .large)
+            IconView(imageName: "preview", iconPattern: .small)
+            IconView(imageName: "preview", iconPattern: .tiny)
+        }
+    }
+ }
+ #endif
