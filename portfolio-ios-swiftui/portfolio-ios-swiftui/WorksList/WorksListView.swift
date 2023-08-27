@@ -10,35 +10,35 @@ import SwiftUI
 struct WorksListView: View {
     let tags = ["Hoge", "fuga", "piyo"]
     @State private var searchText = ""
+    @ObservedObject var worksinfo = WorksListViewModel()
+    
+    init() {
+        worksinfo.fetchWorksListService()
+    }
     
     var body: some View {
         let data: [CustomCell] = [
             CustomCell(
-                title: "くま出没注意",
+                //title: "くま出没注意",
+                title: worksinfo.workList.works[0].title,
                 content: "まっすー",
-                urlString: "https://funcy.tennkyustudio.com/images/499468f2-7625-44c8-91b3-f0f2fc945cfakumaFix.jpeg"
+                urlString: worksinfo.workList.works[0].thumbnail
+            ),
+            CustomCell(
+                title: worksinfo.workList.works[0].title,
+                content: "バッグ",
+                urlString: URL(string: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740")
             ),
             CustomCell(
                 title: "bag",
                 content: "バッグ",
-                urlString: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg"
+                urlString: URL(string: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg")
             ),
             CustomCell(
                 title: "bag",
                 content: "バッグ",
-                urlString: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740"
-            ),
-            CustomCell(
-                title: "bag",
-                content: "バッグ",
-                urlString: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg"
-            ),
-            CustomCell(
-                title: "bag",
-                content: "バッグ",
-                urlString: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg"
-            )
-        ]
+                urlString: URL(string: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg")
+            )        ]
         
         /*
         var filterWord: [String] {

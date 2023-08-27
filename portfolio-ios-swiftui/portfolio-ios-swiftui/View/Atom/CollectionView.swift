@@ -11,12 +11,12 @@ struct CustomCell: View, Identifiable {
     var id = UUID()
     var title: String
     var content: String
-    let urlString: String
+    let urlString: URL?
     let cellCornerRadius: CGFloat = 15
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            let imgPath = URL(string: urlString)
+            let imgPath = urlString
             AsyncImage(url: imgPath) { phase in
                 if let image = phase.image {
                     image
@@ -97,33 +97,33 @@ struct CollectionView: View {
     }
 }
 
-//#if DEBUG
-//struct CollectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let data: [CustomCell] = [
-//            CustomCell(
-//                title: "bag",
-//                content: "バッグ",
-//                urlString: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg"
-//            ),
-//            CustomCell(
-//                title: "bag",
-//                content: "バッグ",
-//                urlString: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740"
-//            ),
-//            CustomCell(
-//                title: "bag",
-//                content: "バッグ",
-//                urlString: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg"
-//            ),
-//            CustomCell(
-//                title: "bag",
-//                content: "バッグ",
-//                urlString: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg"
-//            )
-//        ]
-//
-//        CollectionView(item: data)
-//    }
-//}
-//#endif
+#if DEBUG
+struct CollectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        let data: [CustomCell] = [
+            CustomCell(
+                title: "bag",
+                content: "バッグ",
+                urlString: URL(string: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg")
+            ),
+            CustomCell(
+                title: "bag",
+                content: "バッグ",
+                urlString: URL(string: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740")
+            ),
+            CustomCell(
+                title: "bag",
+                content: "バッグ",
+                urlString: URL(string: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg")
+            ),
+            CustomCell(
+                title: "bag",
+                content: "バッグ",
+                urlString: URL(string: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg")
+            )
+        ]
+
+        CollectionView(item: data)
+    }
+}
+#endif
