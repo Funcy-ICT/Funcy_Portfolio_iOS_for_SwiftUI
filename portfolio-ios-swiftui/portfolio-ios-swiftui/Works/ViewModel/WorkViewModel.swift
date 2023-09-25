@@ -9,9 +9,10 @@ import Foundation
 import YouTubePlayerKit
 
 class WorkViewModel: ObservableObject {
-    
-    @Published var work: WorkDatail
-    @Published var articleID: ArticleID
+    @Published var work: WorkDatail?
+    @Published var articleID: ArticleID?
+    @Published var isLoading: Bool = false
+    @Published var error: Error?
     
     init() {
         let defaultImageURL = URL(string: "http://localhost:3004/2a9d4ce5-9dec-410c-8cdd-9eea59e4c18fmaxresdefault.jpg")!
@@ -28,17 +29,24 @@ class WorkViewModel: ObservableObject {
                                movie: defaultMovieURL,
                                security: 1
         )
-        self.articleID = ArticleID(articleID: "f9cdde7e-ccea-4f69-aea1-f291cfefa223")
+        self.articleID = ArticleID(articleID: "496ca15d-c96d-40e5-bafc-360f1df648fb")
     }
     
     func fetchWorkDatailService() {
+        isLoading = true
         Task.detached {
             do {
-                let response = try await WorkDatailAPIService.shared.fetchWorkDatailService(articleID: self.articleID.articleID)
-                // エラーがなければ必ず通る
-                self.work = response
+                let response = try await WorkDatailAPIService.shared.fetchWorkDatailService(articleID: self.articleID!.articleID)
+                
+                DispatchQueue.main.async {
+                    self.work = response
+                    self.isLoading = false
+                }
             } catch {
-                print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.error = error
+                    self.isLoading = false
+                }
             }
         }
     }
