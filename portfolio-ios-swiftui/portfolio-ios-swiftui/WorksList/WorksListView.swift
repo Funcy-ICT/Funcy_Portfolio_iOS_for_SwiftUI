@@ -65,6 +65,8 @@ struct WorksListView: View {
                 CollectionView(item: data)
             }
             FloatingActionButtonView()
+                .padding(.trailing, 15)
+                .padding(.bottom, 20)
         }
         
     }
