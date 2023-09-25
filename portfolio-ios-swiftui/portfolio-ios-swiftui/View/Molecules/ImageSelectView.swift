@@ -23,7 +23,7 @@ struct ImageSelectView: View {
                    if let image = phase.image {
                        image.resizable()
                            .resizable()
-                           .scaledToFill()
+                           .scaledToFit()
                            .frame(width: width, height: height)
                            .background(Color(UIColor.white))
                    } else if let error = phase.error {

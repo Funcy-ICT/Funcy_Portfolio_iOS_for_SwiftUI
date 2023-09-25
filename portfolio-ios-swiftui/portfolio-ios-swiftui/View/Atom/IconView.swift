@@ -27,8 +27,9 @@ struct IconView: View {
                 image
                     .resizable()
                     .clipShape(Circle())
-                    .scaledToFit()
                     .frame(width: 148.0, height: 148.0)
+                    .scaledToFit()
+                    
             } placeholder: {
                 ProgressView()
             }
@@ -39,8 +40,9 @@ struct IconView: View {
                 image
                     .resizable()
                     .clipShape(Circle())
-                    .scaledToFit()
                     .frame(width: 108.0, height: 108.0)
+                    .scaledToFit()
+                    
             } placeholder: {
                 ProgressView()
             }

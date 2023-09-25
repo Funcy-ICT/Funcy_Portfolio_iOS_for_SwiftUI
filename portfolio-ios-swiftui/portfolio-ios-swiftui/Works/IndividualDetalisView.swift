@@ -42,7 +42,7 @@ struct IndividualDetalisView: View {
                                     
                                     ImageSelectView(images: work.images.compactMap { $0.image })
                                         .padding(.top, -20)
-                                        .shadow(radius: 10)
+                                        //.shadow(radius: 10)
                                     
                                     VStack(alignment: .leading) {
                                         TextView(text: work.title, textPattern: 1)

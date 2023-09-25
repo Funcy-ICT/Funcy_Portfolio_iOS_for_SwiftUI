@@ -15,7 +15,7 @@ class WorkViewModel: ObservableObject {
     @Published var error: Error?
     
     init() {
-        let defaultImageURL = URL(string: "http://localhost:3004/2a9d4ce5-9dec-410c-8cdd-9eea59e4c18fmaxresdefault.jpg")!
+        let defaultImageURL = URL(string: "http://localhost:3004/db729985-cef5-4c5e-826c-154bf3f03e06kumaPoster.png")!
         let defaultWorkURL = URL(string: "https://github.com")!
         let defaultMovieURL = URL(string: "https://www.youtube.com/watch?v=PupqolMfdqI")!
         
@@ -29,7 +29,7 @@ class WorkViewModel: ObservableObject {
                                movie: defaultMovieURL,
                                security: 1
         )
-        self.articleID = ArticleID(articleID: "496ca15d-c96d-40e5-bafc-360f1df648fb")
+        self.articleID = ArticleID(articleID: "3daba91a-667b-433b-bb54-0021a4f8229e")
     }
     
     func fetchWorkDatailService() {
