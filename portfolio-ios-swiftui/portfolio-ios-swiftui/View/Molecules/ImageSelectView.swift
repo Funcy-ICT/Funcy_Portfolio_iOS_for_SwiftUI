@@ -8,41 +8,41 @@
 import SwiftUI
 
 struct ImageSelectView: View {
-    
-    @State var images = [""]
-    let bounds = UIScreen.main.bounds
-    
-    var body: some View {
-        
-        let width = bounds.width * 1
-        let height = bounds.height * 0.3
-        
-        TabView {
-            ForEach(images, id: \.self) { item in
-                Image(item)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: width, height: height)
-                    .background(Color(UIColor.white))
-            }
-        }
-        .frame(height: height + 90)
-        .tabViewStyle(PageTabViewStyle())
-        .onAppear {
-            setupAppearance()
-        }
-    }
-    
-    func setupAppearance() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.systemPink
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.systemPink.withAlphaComponent(0.2)
-      }
+  
+   @State var images: [URL?] = []
+   let bounds = UIScreen.main.bounds
+   
+   var body: some View {
+       
+       let width = bounds.width * 1
+       let height = bounds.height * 0.3
+       
+       TabView {
+           ForEach(images, id: \.self) { item in
+               AsyncImage(url: item) { phase in
+                   if let image = phase.image {
+                       image.resizable()
+                           .resizable()
+                           .scaledToFit()
+                           .frame(width: width, height: height)
+                           .background(Color(UIColor.white))
+                   } else if let error = phase.error {
+                       Text(error.localizedDescription)
+                   } else {
+                       ProgressView()
+                   }
+               }
+           }
+       }
+       .frame(height: height + 90)
+       .tabViewStyle(PageTabViewStyle())
+       .onAppear {
+           setupAppearance()
+       }
+   }
+   
+   func setupAppearance() {
+       UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.systemPink
+       UIPageControl.appearance().pageIndicatorTintColor = UIColor.systemPink.withAlphaComponent(0.2)
+   }
 }
-
-// #if DEBUG
-// struct ImageSelectView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ImageSelectView(images: ["Unknown", "Unknown1", "Unknown2"])
-//    }
-// }
-// #endif

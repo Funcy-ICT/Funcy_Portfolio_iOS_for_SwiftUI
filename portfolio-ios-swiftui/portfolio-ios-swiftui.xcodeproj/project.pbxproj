@@ -14,11 +14,18 @@
 		AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FB28F542D900DCE061 /* TestView2.swift */; };
 		AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */; };
 		AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */; };
-		AB27895C2A1B4A540013C829 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB27895B2A1B4A540013C829 /* ImageSelectView.swift */; };
+		AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */; };
+		AB58414F299B520F00FD9493 /* YouTubePlayerKit in Frameworks */ = {isa = PBXBuildFile; productRef = AB58414E299B520F00FD9493 /* YouTubePlayerKit */; };
+		AB633C8A299F1A2100F57244 /* ImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB633C89299F1A2100F57244 /* ImageSelectView.swift */; };
+		AB73167F2A691F26006BB78A /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB73167E2A691F26006BB78A /* TagView.swift */; };
+		AB7316812A6920B5006BB78A /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB7316802A6920B5006BB78A /* ColorExtension.swift */; };
 		ABAE5BEB28604E4A008ED665 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */; };
 		ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAF1D1A283B78F100F890BC /* ContentView.swift */; };
 		ABAF1D1D283B78F800F890BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1C283B78F800F890BC /* Assets.xcassets */; };
 		ABAF1D20283B78F800F890BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABAF1D1F283B78F800F890BC /* Preview Assets.xcassets */; };
+		ABBA769F299CE6C40061CD50 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA769E299CE6C40061CD50 /* Work.swift */; };
+		ABBA76A1299CFCE30061CD50 /* WorkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA76A0299CFCE30061CD50 /* WorkViewModel.swift */; };
+		ABBA76A3299DD2570061CD50 /* WorkDatailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBA76A2299DD2570061CD50 /* WorkDatailAPIService.swift */; };
 		ABC44B202918F62D00BBE1A6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B182918F62D00BBE1A6 /* LoginViewModel.swift */; };
 		ABC44B212918F62D00BBE1A6 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B192918F62D00BBE1A6 /* LoginPage.swift */; };
 		ABC44B222918F62D00BBE1A6 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B1B2918F62D00BBE1A6 /* Auth.swift */; };
@@ -27,7 +34,6 @@
 		ABC44B252918F62D00BBE1A6 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B1F2918F62D00BBE1A6 /* LoginService.swift */; };
 		ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC44B262918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift */; };
 		ABDA951F286996FA00C7C735 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA951E286996FA00C7C735 /* TextView.swift */; };
-		FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC06F9E8288E85110016E401 /* ColorExtension.swift */; };
 		FC7EC30D28EAC89300600302 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7EC30C28EAC89300600302 /* TextField.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,12 +45,20 @@
 		AA31E7FB28F542D900DCE061 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		AA31E7FF290F9C9F00DCE061 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishingSettingToggleButtonView.swift; sourceTree = "<group>"; };
-		AB27895B2A1B4A540013C829 /* ImageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
+		AB5754BE2A4051950078DB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualDetalisView.swift; sourceTree = "<group>"; };
+		AB633C81299F10F300F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
+		AB633C89299F1A2100F57244 /* ImageSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSelectView.swift; sourceTree = "<group>"; };
+		AB73167E2A691F26006BB78A /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		AB7316802A6920B5006BB78A /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "portfolio-ios-swiftui.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABAF1D1A283B78F100F890BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ABAF1D1C283B78F800F890BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ABAF1D1F283B78F800F890BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ABBA769E299CE6C40061CD50 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		ABBA76A0299CFCE30061CD50 /* WorkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkViewModel.swift; sourceTree = "<group>"; };
+		ABBA76A2299DD2570061CD50 /* WorkDatailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDatailAPIService.swift; sourceTree = "<group>"; };
 		ABC44B182918F62D00BBE1A6 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		ABC44B192918F62D00BBE1A6 /* LoginPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		ABC44B1B2918F62D00BBE1A6 /* Auth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -53,7 +67,6 @@
 		ABC44B1F2918F62D00BBE1A6 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		ABC44B262918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = portfolio_ios_swiftuiApp.swift; sourceTree = "<group>"; };
 		ABDA951E286996FA00C7C735 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
-		FC06F9E8288E85110016E401 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		FC7EC30C28EAC89300600302 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB58414F299B520F00FD9493 /* YouTubePlayerKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +90,40 @@
 			path = Organism;
 			sourceTree = "<group>";
 		};
+		AB584149299B014B00FD9493 /* Works */ = {
+			isa = PBXGroup;
+			children = (
+				AB58414B299B01D200FD9493 /* IndividualDetalisView.swift */,
+				ABBA769C299CCA820061CD50 /* Model */,
+				ABBA769D299CCA890061CD50 /* Service */,
+				ABBA769B299CCA770061CD50 /* ViewModel */,
+			);
+			path = Works;
+			sourceTree = "<group>";
+		};
+		AB633C83299F153A00F57244 /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				AB633C89299F1A2100F57244 /* ImageSelectView.swift */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		AB633C87299F198600F57244 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				AB633C81299F10F300F57244 /* ImageSelectView.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		ABAF1D0C283B78F100F890BC = {
 			isa = PBXGroup;
 			children = (
 				ABAE5BEA28604E4A008ED665 /* .swiftlint.yml */,
 				ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */,
 				ABAF1D16283B78F100F890BC /* Products */,
+				AB633C87299F198600F57244 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,7 +138,9 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				AB5754BE2A4051950078DB4C /* Info.plist */,
 				ABB3AD30284DEA84004C012E /* View */,
+				AB584149299B014B00FD9493 /* Works */,
 				ABC44B162918F62D00BBE1A6 /* Login */,
 				ABAF1D1A283B78F100F890BC /* ContentView.swift */,
 				ABC44B262918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift */,
@@ -117,12 +161,36 @@
 		ABB3AD30284DEA84004C012E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ABF61685299A25EB00DE0E51 /* Molecules */,
+				AB7316802A6920B5006BB78A /* ColorExtension.swift */,
+				AB633C83299F153A00F57244 /* Molecules */,
 				AA31E7FE290F9C5900DCE061 /* Organism */,
 				ABDA9519286994B600C7C735 /* Atom */,
-				FC06F9E8288E85110016E401 /* ColorExtension.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		ABBA769B299CCA770061CD50 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA76A0299CFCE30061CD50 /* WorkViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ABBA769C299CCA820061CD50 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA769E299CE6C40061CD50 /* Work.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ABBA769D299CCA890061CD50 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				ABBA76A2299DD2570061CD50 /* WorkDatailAPIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		ABC44B162918F62D00BBE1A6 /* Login */ = {
@@ -170,19 +238,12 @@
 				0CFE7BC2286A2A6500CA5119 /* ButtonView.swift */,
 				FC7EC30C28EAC89300600302 /* TextField.swift */,
 				AA31E7F728EAD00B00DCE061 /* FloatingActionButtonView.swift */,
+				AB73167E2A691F26006BB78A /* TagView.swift */,
 				AA31E7F928F542C700DCE061 /* TestView1.swift */,
 				AA31E7FB28F542D900DCE061 /* TestView2.swift */,
 				AADD20EB292B6A45008EE02E /* PublishingSettingToggleButtonView.swift */,
 			);
 			path = Atom;
-			sourceTree = "<group>";
-		};
-		ABF61685299A25EB00DE0E51 /* Molecules */ = {
-			isa = PBXGroup;
-			children = (
-				AB27895B2A1B4A540013C829 /* ImageSelectView.swift */,
-			);
-			path = Molecules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +263,9 @@
 			dependencies = (
 			);
 			name = "portfolio-ios-swiftui";
+			packageProductDependencies = (
+				AB58414E299B520F00FD9493 /* YouTubePlayerKit */,
+			);
 			productName = "portfolio-ios-swiftui";
 			productReference = ABAF1D15283B78F100F890BC /* portfolio-ios-swiftui.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +294,9 @@
 				Base,
 			);
 			mainGroup = ABAF1D0C283B78F100F890BC;
+			packageReferences = (
+				AB58414D299B520F00FD9493 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */,
+			);
 			productRefGroup = ABAF1D16283B78F100F890BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,22 +347,27 @@
 				ABC44B232918F62D00BBE1A6 /* User.swift in Sources */,
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
 				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
+				AB7316812A6920B5006BB78A /* ColorExtension.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
-				AB27895C2A1B4A540013C829 /* ImageSelectView.swift in Sources */,
+				AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */,
+				ABBA76A3299DD2570061CD50 /* WorkDatailAPIService.swift in Sources */,
+				ABBA76A1299CFCE30061CD50 /* WorkViewModel.swift in Sources */,
 				AA31E800290F9C9F00DCE061 /* TabBarView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
+				ABBA769F299CE6C40061CD50 /* Work.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
 				ABC44B212918F62D00BBE1A6 /* LoginPage.swift in Sources */,
 				ABC44B252918F62D00BBE1A6 /* LoginService.swift in Sources */,
 				FC7EC30D28EAC89300600302 /* TextField.swift in Sources */,
 				AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */,
 				ABC44B242918F62D00BBE1A6 /* APIServiceError.swift in Sources */,
-				FC06F9E9288E85110016E401 /* ColorExtension.swift in Sources */,
 				ABC44B202918F62D00BBE1A6 /* LoginViewModel.swift in Sources */,
 				ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
+				AB633C8A299F1A2100F57244 /* ImageSelectView.swift in Sources */,
 				ABC44B222918F62D00BBE1A6 /* Auth.swift in Sources */,
+				AB73167F2A691F26006BB78A /* TagView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,13 +496,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"portfolio-ios-swiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = 96HRR7LBPW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "portfolio-ios-swiftui/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,11 +528,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"portfolio-ios-swiftui/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "portfolio-ios-swiftui/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +569,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AB58414D299B520F00FD9493 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SvenTiigi/YouTubePlayerKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AB58414E299B520F00FD9493 /* YouTubePlayerKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AB58414D299B520F00FD9493 /* XCRemoteSwiftPackageReference "YouTubePlayerKit" */;
+			productName = YouTubePlayerKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ABAF1D0D283B78F100F890BC /* Project object */;
 }

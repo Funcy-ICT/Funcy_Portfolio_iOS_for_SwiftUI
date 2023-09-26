@@ -10,33 +10,49 @@ import SwiftUI
 enum IconPattern {
     case large
     case small
+    case tiny
 }
 
 struct IconView: View {
-
+    
     // Todo: 将来的にURLに置き換える
-    let imageName: String
+    let imageName: URL?
+    
     let iconPattern: IconPattern
-
+    
     var body: some View {
-
+        
         switch iconPattern {
-
+            
         case .large:
-            Image(imageName)
-                .resizable()
-                .clipShape(Circle())
-                .scaledToFit()
-                .frame(width: 148.0, height: 148.0)
-        // 74 × 2 = 148.0
-
+            AsyncImage(url: imageName) { item in
+                if let image = item.image {
+                    image.resizable()
+                        .scaledToFill()
+                        .frame(width: 74.0, height: 74.0)
+                        .clipShape(Circle())
+                }
+            }
+            
         case .small:
-            Image(imageName)
-                .resizable()
-                .clipShape(Circle())
-                .scaledToFit()
-                .frame(width: 108.0, height: 108.0)
-        // 54 × 2 = 108.0
+            AsyncImage(url: imageName) { item in
+                if let image = item.image {
+                    image.resizable()
+                        .scaledToFill()
+                        .frame(width: 54.0, height: 54.0)
+                        .clipShape(Circle())
+                }
+            }
+            
+        case .tiny:
+            AsyncImage(url: imageName) { item in
+                if let image = item.image {
+                    image.resizable()
+                        .scaledToFill()
+                        .frame(width: 44.0, height: 44.0)
+                        .clipShape(Circle())
+                }
+            }
         }
     }
 }
@@ -44,7 +60,10 @@ struct IconView: View {
 // #if DEBUG
 // struct IconView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        IconView(imageName: "IMG_6788", iconPattern: .small)
+//        VStack {
+//            IconView(imageName: URL(string: "http://localhost:3004/9efbc5ad-23a6-4f7b-8133-93a8ed128f2cmasuda.jpeg"), iconPattern: .large)
+//
+//        }
 //    }
 // }
 // #endif

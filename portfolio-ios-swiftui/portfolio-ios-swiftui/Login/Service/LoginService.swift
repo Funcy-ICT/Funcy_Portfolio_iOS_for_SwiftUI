@@ -11,7 +11,6 @@ import SwiftUI
 final class LoginAPIService {
     
     static let shared = LoginAPIService()
-    private init() {}
     
     public func fetchLoginService(mail: String, password: String) async throws -> Login {
         
