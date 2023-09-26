@@ -10,6 +10,7 @@ import SwiftUI
 enum IconPattern {
     case large
     case small
+    case tiny
 }
 
 struct IconView: View {
@@ -27,9 +28,9 @@ struct IconView: View {
             AsyncImage(url: imageName) { item in
                 if let image = item.image {
                     image.resizable()
-                        .clipShape(Circle())
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(width: 74.0, height: 74.0)
+                        .clipShape(Circle())
                 }
             }
             
@@ -37,9 +38,9 @@ struct IconView: View {
             AsyncImage(url: imageName) { item in
                 if let image = item.image {
                     image.resizable()
-                        .clipShape(Circle())
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(width: 54.0, height: 54.0)
+                        .clipShape(Circle())
                 }
             }
             
@@ -47,9 +48,9 @@ struct IconView: View {
             AsyncImage(url: imageName) { item in
                 if let image = item.image {
                     image.resizable()
-                        .clipShape(Circle())
-                        .scaledToFit()
+                        .scaledToFill()
                         .frame(width: 44.0, height: 44.0)
+                        .clipShape(Circle())
                 }
             }
         }

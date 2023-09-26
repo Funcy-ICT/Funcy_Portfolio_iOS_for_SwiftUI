@@ -29,7 +29,7 @@ class WorkViewModel: ObservableObject {
                                movie: defaultMovieURL,
                                security: 1
         )
-        self.articleID = ArticleID(articleID: "3daba91a-667b-433b-bb54-0021a4f8229e")
+        self.articleID = ArticleID(articleID: "496ca15d-c96d-40e5-bafc-360f1df648fb")
     }
     
     func fetchWorkDatailService() {

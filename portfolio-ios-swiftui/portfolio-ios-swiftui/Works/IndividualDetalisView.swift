@@ -33,7 +33,8 @@ struct IndividualDetalisView: View {
                                 ScrollView {
                                     HStack {
                                         IconView(imageName: work.icon, iconPattern: .small)
-                                            .shadow(radius: 10)
+                                            .padding(.horizontal, 20)
+                                            .shadow(radius: 5)
                                         TextView(text: "\(work.userName)", textPattern: 1)
                                     }
                                     .frame(height: 54.0)
