@@ -33,7 +33,7 @@ struct FloatingActionButtonView: View {
                         .frame(width: buttonSize, height: buttonSize)
                         .shadow(radius: 2, x: 1, y: 2)
 
-                    Image(systemName: "plus")
+                    SwiftUI.Image(systemName: "plus")
                         .frame(width: buttonSize, height: buttonSize)
                         .foregroundColor(.white)
                         .font(.system(size: buttonSize * 0.7))
