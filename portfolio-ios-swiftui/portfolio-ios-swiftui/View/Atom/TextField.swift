@@ -11,7 +11,7 @@ struct TextBox: View {
     var width: CGFloat = 250
     var height: CGFloat = 40 // TextFieldの時にのみ使用可能
     var lines: ClosedRange = 1...1
-    @FocusState var focus:Bool
+    @FocusState var focus: Bool
     
     var body: some View {
         
@@ -46,15 +46,15 @@ struct TextBox: View {
     }
 }
 
-//#if DEBUG
-//struct TextBox_Previews: PreviewProvider {
-//    static var previews: some View {
-//        VStack(alignment: .leading) {
-//            TextBox(text: "メールアドレス")
-//            TextBox(text: "メールアドレス", width: 300)
-//            TextBox(text: "メールアドレス", lines: 6...6)
-//            TextBox(text: "メールアドレス", width: 200, lines: 5...5)
-//        }
-//    }
-//}
-//#endif
+// #if DEBUG
+// struct TextBox_Previews: PreviewProvider {
+//     static var previews: some View {
+//         VStack(alignment: .leading) {
+//             TextBox(text: "メールアドレス")
+//             TextBox(text: "メールアドレス", width: 300)
+//             TextBox(text: "メールアドレス", lines: 6...6)
+//             TextBox(text: "メールアドレス", width: 200, lines: 5...5)
+//         }
+//     }
+// }
+// #endif
