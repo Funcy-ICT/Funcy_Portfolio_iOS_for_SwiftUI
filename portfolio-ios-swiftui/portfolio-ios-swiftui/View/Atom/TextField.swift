@@ -11,7 +11,7 @@ struct TextBox: View {
     var width: CGFloat = 250
     var height: CGFloat = 40 // TextFieldの時にのみ使用可能
     var lines: ClosedRange = 1...1
-    @FocusState  var isActive: Bool
+    @FocusState var focus:Bool
     
     var body: some View {
         
