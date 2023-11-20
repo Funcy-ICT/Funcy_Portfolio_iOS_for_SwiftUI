@@ -23,7 +23,7 @@ struct WorksListView: View {
         } else if let error = worksinfo.error {
             Text("Error: \(error.localizedDescription)")
         } else {
-            let customCellData = getCustomCellList(worksinfo: worksinfo)
+            let customCellData = getCustomCellList(worksinfo: worksinfo)    //api呼び出し後、CustomCell型の配列に追加
             ZStack(alignment: .bottomTrailing) {
                 VStack {
                     TextField("search", text: $searchText)
