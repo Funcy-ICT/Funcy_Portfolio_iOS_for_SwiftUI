@@ -27,12 +27,13 @@ final class WorksListAPIService {
         
         let data = try await URLSession.shared.data(for: request)
         let response: WorksListDatail = try JSONDecoder().decode(WorksListDatail.self, from: data.0)
-        print(response.works[2])
-        
+        //print(response.works[2])
+        print("hogehoge3")
+        /*
         for responses in response.works {
             print(responses)
         }
-        
+        */
         return response
          
     }
