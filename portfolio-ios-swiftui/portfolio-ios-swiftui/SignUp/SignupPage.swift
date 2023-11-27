@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct SignupPage: View {
     
     @ObservedObject var signup = SignupViewModel()
     @Environment(\.presentationMode) var presentationMode
     @State var end_register: Bool = false
+    @State private var selectedImage: UIImage?
+    @State private var isPickerPresented = false
     
     let gradeList = ["学部1年", "学部2年", "学部3年", "学部4年","修士1年","修士2年","博士1年","博士2年","博士3年","教員"]
     
@@ -23,7 +26,7 @@ struct SignupPage: View {
             ScrollView {
                 VStack {
                     VStack {
-                        HStack {
+                        HStack(spacing: 15)  {
                             TextView(text: "表示名", textPattern: 0)
                             TextField("", text: $signup.displayName)
                                 .frame(width: 140, height: 50)
@@ -31,16 +34,35 @@ struct SignupPage: View {
                                 .overlay(RoundedRectangle(cornerRadius: 15)
                                     .stroke(Color.grayBottonColor, lineWidth: 2)
                                 )
-                                .padding(.leading, 10)
+                                .padding(.trailing, 25)
                             
-                            SwiftUI.Image("userIcon_plus")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 90, height: 90)
-                                .padding(.leading, 25)
+                            if let selectedImage = selectedImage {
+                                Button(action: {
+                                    isPickerPresented = true
+                                }) {
+                                    SwiftUI.Image(uiImage: selectedImage)
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 74.0, height: 74.0)
+                                        .clipShape(Circle())
+                                }
+                            } else {
+                                Button(action: {
+                                    isPickerPresented = true
+                                }) {
+                                    SwiftUI.Image("user_plus")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 74.0, height: 74.0)
+                                }
+                            }
                         }
+                        .sheet(isPresented: $isPickerPresented) {
+                                    PhotoPicker(selectedImage: $selectedImage)
+                                }
                         Text("※ '表示名'は第三者に公開されます")
                             .foregroundColor(.gray)
+                            .padding(.top, 10)
                     }
                     .padding(.bottom, 20)
                     
@@ -89,6 +111,7 @@ struct SignupPage: View {
                         backgroundColor: Color.subPink, radius: 25
                     )
                 }
+                .padding(.top)
             }
         }
         .navigationBarBackButtonHidden(true) // デフォルトの戻るボタンを隠す
