@@ -15,11 +15,18 @@ struct TextBox: View {
     var lines: ClosedRange = 1...1
     @FocusState var focus: Bool
     
+    var isRequired: Bool = false
+    
     var body: some View {
         
         if lines == 1...1 { // 単一行のTextField
             VStack(alignment: .leading) {
-                TextView(text: titleText, textPattern: 0)
+                HStack(spacing:0) {
+                    TextView(text: titleText, textPattern: 0)
+                    if isRequired {
+                        TextView(text: "*", textPattern: 0).foregroundColor(.red)
+                    }
+                }
 
                 if fieldHide {
                     SecureField(descriptionText, text: $inputText)
@@ -41,8 +48,13 @@ struct TextBox: View {
             }
         } else { // 複数行のTextField
             VStack(alignment: .leading) {
-                Text(titleText)
-                    .foregroundColor(Color.text)
+                HStack(spacing:0) {
+                    TextView(text: titleText, textPattern: 0)
+                    if isRequired {
+                        TextView(text: "*", textPattern: 0).foregroundColor(.red)
+                    }
+                }
+                
                 TextField(descriptionText, text: $inputText, axis: .vertical)
                     .autocapitalization(.none)
                     .frame(width: width)
@@ -62,9 +74,9 @@ struct TextBox: View {
 //    static var previews: some View {
 //        VStack(alignment: .leading) {
 //            TextBox(inputText: .constant(""), titleText: "メールアドレス")
-//            TextBox(inputText: .constant(""), titleText: "パスワード", descriptionText: "8文字以上記号必須", fieldHide: true)
+//            TextBox(inputText: .constant(""), titleText: "パスワード", descriptionText: "8文字以上記号必須", fieldHide: true, isRequired: true) //noqa
 //            TextBox(inputText: .constant(""), titleText: "メールアドレス", width: 300)
-//            TextBox(inputText: .constant(""), titleText: "メールアドレス", lines: 6...6)
+//            TextBox(inputText: .constant(""), titleText: "メールアドレス", lines: 6...6, isRequired: true)
 //            TextBox(inputText: .constant(""), titleText: "メールアドレス", width: 200, lines: 5...5)
 //        }
 //    }
