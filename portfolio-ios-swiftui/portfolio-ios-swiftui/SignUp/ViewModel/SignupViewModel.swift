@@ -25,14 +25,14 @@ class SignupViewModel: ObservableObject {
         self.register = Register(userID: "")
         
         self.displayName = ""
-        self.userIcon = "aaaa"
+        self.userIcon = ""
         self.familyName = ""
         self.firstName = ""
         self.mail = ""
         self.password = ""
         self.checkPassword = ""
-        self.grade = ""
-        self.course = ""
+        self.grade = "学部1年"
+        self.course = "未所属"
         
         fetchSignupService()
     }
