@@ -68,7 +68,8 @@ func getCustomCellList(worksinfo: WorksListViewModel) -> [CustomCell] {
                 CustomCell(
                     title: worksinfo.workList.works[number].title,
                     content: worksinfo.workList.works[number].title,   // 名前がapiにないので暫定
-                    urlString: worksinfo.workList.works[number].thumbnail
+                    urlString: worksinfo.workList.works[number].thumbnail,
+                    articleid: worksinfo.workList.works[number].workID
                 )
             )
         print("customCell data")

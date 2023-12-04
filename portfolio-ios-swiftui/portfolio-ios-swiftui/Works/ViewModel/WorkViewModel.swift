@@ -8,9 +8,12 @@
 import Foundation
 import YouTubePlayerKit
 
+import Foundation
+import YouTubePlayerKit
+
 class WorkViewModel: ObservableObject {
     @Published var work: WorkDatail?
-    @Published var articleID: ArticleID?
+    @Published var articleID: String
     @Published var isLoading: Bool = false
     @Published var error: Error?
     
@@ -29,14 +32,14 @@ class WorkViewModel: ObservableObject {
                                movie: defaultMovieURL,
                                security: 1
         )
-        self.articleID = ArticleID(articleID: "496ca15d-c96d-40e5-bafc-360f1df648fb")
+        self.articleID = "496ca15d-c96d-40e5-bafc-360f1df648fb"
     }
     
-    func fetchWorkDatailService() {
+    func fetchWorkDatailService(articleID: String) {
         isLoading = true
         Task.detached {
             do {
-                let response = try await WorkDatailAPIService.shared.fetchWorkDatailService(articleID: self.articleID!.articleID)
+                let response = try await WorkDatailAPIService.shared.fetchWorkDatailService(articleID: self.articleID)
                 
                 DispatchQueue.main.async {
                     self.work = response

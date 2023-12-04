@@ -12,7 +12,9 @@ struct CustomCell: View, Identifiable {
     var title: String
     var content: String
     let urlString: URL?
+    var articleid: String
     let cellCornerRadius: CGFloat = 15
+    @State private var showIndividualDetalisView: Bool = false
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -52,11 +54,14 @@ struct CustomCell: View, Identifiable {
                 cornerRadius: cellCornerRadius,
                 maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]))
         }
+ 
         // 枠線
         .frame(width: 150, height: 152)
-        .onTapGesture {
-            print("tap: \(title)")
-        }
+        
+//        .onTapGesture {
+//            print("tap: \(title)")
+//            showIndividualDetalisView = true
+//        }
     }
 }
 
@@ -79,51 +84,97 @@ struct PartlyRoundedCornerView: UIViewRepresentable {
 }
 
 struct CollectionView: View {
+    
     // .fixed(item同士の間隔), count 横にいくつ表示するか
     var colums: [GridItem] = Array(repeating: .init(.fixed(165)), count: 2)
     
     let item: [CustomCell]
-
+    
+    @StateObject var workinfo = WorkViewModel()
+    @State private var selectedWorkID: String?
+    
     var body: some View {
-        ScrollView(.vertical) {
-            LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
-                ForEach((0..<item.count), id: \.self) { num in
-                    HStack {
-                        item[num]
+            NavigationStack {
+                ScrollView(.vertical) {
+                    LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
+                        ForEach((0..<item.count), id: \.self) { num in
+                            VStack {
+                                item[num]
+                                    .onTapGesture {
+                                        selectedWorkID = item[num].articleid
+                                    }
+                            }
+                        }
                     }
+                }
+                .navigationDestination(for: String.self) { workID in
+                    IndividualDetalisView()
+                        .onAppear {
+                            Task {
+                                await workinfo.fetchWorkDatailService(articleID: workID)
+                            }
+                        }
                 }
             }
         }
+    
+//    var body: some View {
+//        let asyncClass = AsyncClass()
+//        NavigationView {
+//            ScrollView(.vertical) {
+//                LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
+//                    ForEach((0..<item.count), id: \.self) { num in
+//                        Task{
+//                            await asyncClass.fetchWork(workID: item[num].articleid)
+//                            NavigationLink(
+//                                destination: IndividualDetalisView(),
+//                                label:  {
+//                                    HStack {
+//                                        item[num]
+//                                    }
+//                                })
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//    }
+}
+
+class AsyncClass{
+    @ObservedObject var workinfo = WorkViewModel()
+    func fetchWork(workID: String) async{
+        workinfo.fetchWorkDatailService(articleID: workID)
     }
 }
 
-#if DEBUG
-struct CollectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        let data: [CustomCell] = [
-            CustomCell(
-                title: "bag",
-                content: "バッグ",
-                urlString: URL(string: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg")
-            ),
-            CustomCell(
-                title: "bag",
-                content: "バッグ",
-                urlString: URL(string: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740")
-            ),
-            CustomCell(
-                title: "bag",
-                content: "バッグ",
-                urlString: URL(string: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg")
-            ),
-            CustomCell(
-                title: "bag",
-                content: "バッグ",
-                urlString: URL(string: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg")
-            )
-        ]
-
-        CollectionView(item: data)
-    }
-}
-#endif
+//#if DEBUG
+//struct CollectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let data: [CustomCell] = [
+//            CustomCell(
+//                title: "bag",
+//                content: "バッグ",
+//                urlString: URL(string: "https://www.totebag.jp/img/01product/01ready-made/H50110.jpg")
+//            ),
+//            CustomCell(
+//                title: "bag",
+//                content: "バッグ",
+//                urlString: URL(string: "https://img20.shop-pro.jp/PA01323/160/etc/osanpoM202209-1.jpg?cmsp_timestamp=20220918135740")
+//            ),
+//            CustomCell(
+//                title: "bag",
+//                content: "バッグ",
+//                urlString: URL(string: "https://www.wirebag.jp/assets/upload/imgupload/2023/02/13/subbag_600_760.jpg")
+//            ),
+//            CustomCell(
+//                title: "bag",
+//                content: "バッグ",
+//                urlString: URL(string: "https://media.townwork.net/uploads/2023/02/5d1b5bb302899a2916e99544aaf169e6.jpg")
+//            )
+//        ]
+//
+//        CollectionView(item: data)
+//    }
+//}
+//#endif

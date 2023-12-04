@@ -11,10 +11,9 @@ import YouTubePlayerKit
 struct IndividualDetalisView: View {
     @ObservedObject var workinfo = WorkViewModel()
     
-    init() {
-        workinfo.fetchWorkDatailService()
-    }
-    
+//    init(getWorkID: String) {
+//        workinfo.fetchWorkDatailService(articleID: getWorkID)
+//    }
     let bounds = UIScreen.main.bounds
     var body: some View {
         
