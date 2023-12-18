@@ -93,60 +93,76 @@ struct CollectionView: View {
     @StateObject var workinfo = WorkViewModel()
     @State private var selectedWorkID: String?
     
+    @State private var isLinkActive = false
+    
     var body: some View {
-            NavigationStack {
-                ScrollView(.vertical) {
-                    LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
-                        ForEach((0..<item.count), id: \.self) { num in
-                            VStack {
-                                item[num]
-                                    .onTapGesture {
+        NavigationStack {
+            ScrollView(.vertical) {
+                LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
+                    ForEach((0..<item.count), id: \.self) { num in
+                        VStack {
+                            item[num]
+                                .onTapGesture {
+                                    Task {
                                         selectedWorkID = item[num].articleid
+                                        fetchWorkDetail(for: item[num].articleid)
+                                        isLinkActive = true // 遷移をトリガー
                                     }
-                            }
+                                    print(item[num].title)
+                                
+                                }
                         }
+                        .background(
+                            NavigationLink(destination: IndividualDetalisView(), isActive: $isLinkActive) {
+                                EmptyView()
+                            }
+                        )
+                        
                     }
                 }
-                .navigationDestination(for: String.self) { workID in
-                    IndividualDetalisView()
-                        .onAppear {
-                            Task {
-                                await workinfo.fetchWorkDatailService(articleID: workID)
-                            }
-                        }
-                }
+            }
+//            .navigationDestination(for: String.self, destination: { _ in
+//                IndividualDetalisView()
+//            })
+        }
+    }
+    
+    func fetchWorkDetail(for workID: String) {
+            Task {
+                await workinfo.fetchWorkDatailService(articleID: workID)
             }
         }
     
-//    var body: some View {
-//        let asyncClass = AsyncClass()
-//        NavigationView {
-//            ScrollView(.vertical) {
-//                LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
-//                    ForEach((0..<item.count), id: \.self) { num in
-//                        Task{
-//                            await asyncClass.fetchWork(workID: item[num].articleid)
-//                            NavigationLink(
-//                                destination: IndividualDetalisView(),
-//                                label:  {
-//                                    HStack {
-//                                        item[num]
-//                                    }
-//                                })
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
+    //    var body: some View {
+    //        let asyncClass = AsyncClass()
+    //        NavigationView {
+    //            ScrollView(.vertical) {
+    //                LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
+    //                    ForEach((0..<item.count), id: \.self) { num in
+    //                        Task{
+    //                            await asyncClass.fetchWork(workID: item[num].articleid)
+    //                            NavigationLink(
+    //                                destination: IndividualDetalisView(),
+    //                                label:  {
+    //                                    HStack {
+    //                                        item[num]
+    //                                    }
+    //                                })
+    //                        }
+    //                    }
+    //                }
+    //            }
+    //        }
+    //    }
 }
 
-class AsyncClass{
-    @ObservedObject var workinfo = WorkViewModel()
-    func fetchWork(workID: String) async{
-        workinfo.fetchWorkDatailService(articleID: workID)
-    }
-}
+//class AsyncClass {
+//    var workinfo = WorkViewModel()
+//    func fetchWorkDetail(for workID: String) async {
+//        workinfo.fetchWorkDatailService(articleID: workID)
+//        print("ここは終わった")
+//    }
+//}
 
 //#if DEBUG
 //struct CollectionView_Previews: PreviewProvider {

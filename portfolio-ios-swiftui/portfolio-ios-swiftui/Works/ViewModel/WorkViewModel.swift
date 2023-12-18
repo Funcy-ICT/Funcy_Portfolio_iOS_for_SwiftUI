@@ -40,7 +40,7 @@ class WorkViewModel: ObservableObject {
         Task.detached {
             do {
                 let response = try await WorkDatailAPIService.shared.fetchWorkDatailService(articleID: self.articleID)
-                
+                print(response)
                 DispatchQueue.main.async {
                     self.work = response
                     self.isLoading = false

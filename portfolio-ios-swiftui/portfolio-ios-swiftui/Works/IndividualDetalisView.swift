@@ -20,6 +20,8 @@ struct IndividualDetalisView: View {
         let mobileWidth = bounds.width * 1
         let mobileHeight = bounds.height * 0.3
         
+        let _ = print("ここにいる")
+        
         if workinfo.isLoading {
                     ProgressView()
                 } else if let error = workinfo.error {
