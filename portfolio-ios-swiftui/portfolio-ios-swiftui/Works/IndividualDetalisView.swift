@@ -11,10 +11,9 @@ import YouTubePlayerKit
 struct IndividualDetalisView: View {
     @ObservedObject var workinfo = WorkViewModel()
     
-    init() {
-        workinfo.fetchWorkDatailService()
-    }
-    
+//    init(getWorkID: String) {
+//        workinfo.fetchWorkDatailService(articleID: getWorkID)
+//    }
     let bounds = UIScreen.main.bounds
     var body: some View {
         
@@ -27,6 +26,8 @@ struct IndividualDetalisView: View {
                     Text("Error: \(error.localizedDescription)")
                 } else {
                     if let work = workinfo.work {
+                        let _ = print("IndividualDetailsView")
+                        let _ = print(work.title)
                         // work を使用したビューをここに配置
                         NavigationView {
                             VStack {

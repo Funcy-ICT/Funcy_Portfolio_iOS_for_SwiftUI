@@ -16,12 +16,12 @@ struct TabBarView: View {
 
     var body: some View {
         TabView {
-            TestView1() // メイン画面のView
+            WorksListView() // メイン画面のView
                 .tabItem {
                     SwiftUI.Image(systemName: "magnifyingglass")
                     Text("検索")
                 }
-            TestView2() // マイページ（個人）のView
+            LoginPage() // マイページ（個人）のView
                 .tabItem {
                     SwiftUI.Image(systemName: "person")
                     Text("ユーザー")

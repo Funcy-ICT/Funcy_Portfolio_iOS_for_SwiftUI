@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0483FA3C290669BC001866C9 /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0483FA3B290669BC001866C9 /* IconView.swift */; };
+		0C862E002A7ADEE200BBA9A4 /* WorksListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C862DFF2A7ADEE200BBA9A4 /* WorksListViewModel.swift */; };
+		0C862E022A7ADF9700BBA9A4 /* WorksListAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C862E012A7ADF9700BBA9A4 /* WorksListAPIService.swift */; };
+		0C862E042A7C1EA200BBA9A4 /* WorkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C862E032A7C1EA200BBA9A4 /* WorkList.swift */; };
+		0CB3E2402A498592008CD563 /* WorksListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB3E23F2A498592008CD563 /* WorksListView.swift */; };
 		0CD869B42A2485400024F0BA /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD869B32A2485400024F0BA /* MyPageView.swift */; };
 		0CD869B62A2497D90024F0BA /* GroupPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD869B52A2497D90024F0BA /* GroupPageView.swift */; };
 		0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF733712A2DBB7200680560 /* CollectionView.swift */; };
@@ -43,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		0483FA3B290669BC001866C9 /* IconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
+		0C862DFF2A7ADEE200BBA9A4 /* WorksListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksListViewModel.swift; sourceTree = "<group>"; };
+		0C862E012A7ADF9700BBA9A4 /* WorksListAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksListAPIService.swift; sourceTree = "<group>"; };
+		0C862E032A7C1EA200BBA9A4 /* WorkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkList.swift; sourceTree = "<group>"; };
+		0CB3E23F2A498592008CD563 /* WorksListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorksListView.swift; sourceTree = "<group>"; };
 		0CD869B32A2485400024F0BA /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		0CD869B52A2497D90024F0BA /* GroupPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPageView.swift; sourceTree = "<group>"; };
 		0CF733712A2DBB7200680560 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
@@ -90,6 +98,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C862DFC2A7ADE8300BBA9A4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0C862DFF2A7ADEE200BBA9A4 /* WorksListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0C862DFD2A7ADE9600BBA9A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0C862E032A7C1EA200BBA9A4 /* WorkList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0C862DFE2A7ADEA200BBA9A4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0C862E012A7ADF9700BBA9A4 /* WorksListAPIService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		0CB3E23E2A498561008CD563 /* WorksList */ = {
+			isa = PBXGroup;
+			children = (
+				0C862DFE2A7ADEA200BBA9A4 /* Service */,
+				0C862DFD2A7ADE9600BBA9A4 /* Model */,
+				0C862DFC2A7ADE8300BBA9A4 /* ViewModel */,
+				0CB3E23F2A498592008CD563 /* WorksListView.swift */,
+			);
+			path = WorksList;
+			sourceTree = "<group>";
+		};
 		AA31E7FE290F9C5900DCE061 /* Organism */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +189,7 @@
 		ABAF1D17283B78F100F890BC /* portfolio-ios-swiftui */ = {
 			isa = PBXGroup;
 			children = (
+				0CB3E23E2A498561008CD563 /* WorksList */,
 				AB5754BE2A4051950078DB4C /* Info.plist */,
 				ABB3AD30284DEA84004C012E /* View */,
 				AB584149299B014B00FD9493 /* Works */,
@@ -359,6 +403,7 @@
 				ABC44B232918F62D00BBE1A6 /* User.swift in Sources */,
 				ABDA951F286996FA00C7C735 /* TextView.swift in Sources */,
 				0483FA3C290669BC001866C9 /* IconView.swift in Sources */,
+				0C862E002A7ADEE200BBA9A4 /* WorksListViewModel.swift in Sources */,
 				AB7316812A6920B5006BB78A /* ColorExtension.swift in Sources */,
 				ABAF1D1B283B78F100F890BC /* ContentView.swift in Sources */,
 				AB58414C299B01D200FD9493 /* IndividualDetalisView.swift in Sources */,
@@ -368,7 +413,9 @@
 				0CD869B62A2497D90024F0BA /* GroupPageView.swift in Sources */,
 				0CF733722A2DBB7200680560 /* CollectionView.swift in Sources */,
 				AA31E7F828EAD00B00DCE061 /* FloatingActionButtonView.swift in Sources */,
+				0C862E022A7ADF9700BBA9A4 /* WorksListAPIService.swift in Sources */,
 				0CF733742A36FA2000680560 /* TagView.swift in Sources */,
+				0CB3E2402A498592008CD563 /* WorksListView.swift in Sources */,
 				AA31E7FA28F542C700DCE061 /* TestView1.swift in Sources */,
 				ABBA769F299CE6C40061CD50 /* Work.swift in Sources */,
 				0CFE7BC3286A2A6500CA5119 /* ButtonView.swift in Sources */,
@@ -378,6 +425,7 @@
 				AADD20EC292B6A45008EE02E /* PublishingSettingToggleButtonView.swift in Sources */,
 				ABC44B242918F62D00BBE1A6 /* APIServiceError.swift in Sources */,
 				ABC44B202918F62D00BBE1A6 /* LoginViewModel.swift in Sources */,
+				0C862E042A7C1EA200BBA9A4 /* WorkList.swift in Sources */,
 				ABC44B272918F93200BBE1A6 /* portfolio_ios_swiftuiApp.swift in Sources */,
 				0CD869B42A2485400024F0BA /* MyPageView.swift in Sources */,
 				AA31E7FC28F542D900DCE061 /* TestView2.swift in Sources */,
@@ -512,7 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"portfolio-ios-swiftui/Preview Content\"";
-				DEVELOPMENT_TEAM = 96HRR7LBPW;
+				DEVELOPMENT_TEAM = 94AVPT8726;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "portfolio-ios-swiftui/Info.plist";
@@ -542,6 +590,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"portfolio-ios-swiftui/Preview Content\"";
+				DEVELOPMENT_TEAM = 94AVPT8726;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "portfolio-ios-swiftui/Info.plist";
