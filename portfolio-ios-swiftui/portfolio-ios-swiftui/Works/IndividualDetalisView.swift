@@ -20,14 +20,14 @@ struct IndividualDetalisView: View {
         let mobileWidth = bounds.width * 1
         let mobileHeight = bounds.height * 0.3
         
-        let _ = print("ここにいる")
-        
         if workinfo.isLoading {
                     ProgressView()
                 } else if let error = workinfo.error {
                     Text("Error: \(error.localizedDescription)")
                 } else {
                     if let work = workinfo.work {
+                        let _ = print("IndividualDetailsView")
+                        let _ = print(work.title)
                         // work を使用したビューをここに配置
                         NavigationView {
                             VStack {

@@ -105,55 +105,30 @@ struct CollectionView: View {
                                 .onTapGesture {
                                     Task {
                                         selectedWorkID = item[num].articleid
-                                        fetchWorkDetail(for: item[num].articleid)
-                                        isLinkActive = true // 遷移をトリガー
+                                        fetchWorkDetail(for: item[num].articleid) { //articleIDをもとに詳細情報を取得
+                                            isLinkActive = true
+                                        }
                                     }
                                     print(item[num].title)
-                                
                                 }
                         }
-                        .background(
-                            NavigationLink(destination: IndividualDetalisView(), isActive: $isLinkActive) {
-                                EmptyView()
-                            }
-                        )
-                        
                     }
+                    .background(
+                        NavigationLink(destination: IndividualDetalisView(), isActive: $isLinkActive) {
+                            EmptyView()
+                        }
+                    )
                 }
             }
-//            .navigationDestination(for: String.self, destination: { _ in
-//                IndividualDetalisView()
-//            })
         }
     }
     
-    func fetchWorkDetail(for workID: String) {
+    func fetchWorkDetail(for workID: String, completion: @escaping () -> Void) {
             Task {
                 await workinfo.fetchWorkDatailService(articleID: workID)
+                completion()
             }
         }
-    
-    //    var body: some View {
-    //        let asyncClass = AsyncClass()
-    //        NavigationView {
-    //            ScrollView(.vertical) {
-    //                LazyVGrid(columns: colums, alignment: .center, spacing: 20) {
-    //                    ForEach((0..<item.count), id: \.self) { num in
-    //                        Task{
-    //                            await asyncClass.fetchWork(workID: item[num].articleid)
-    //                            NavigationLink(
-    //                                destination: IndividualDetalisView(),
-    //                                label:  {
-    //                                    HStack {
-    //                                        item[num]
-    //                                    }
-    //                                })
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //        }
-    //    }
 }
 
 //class AsyncClass {
