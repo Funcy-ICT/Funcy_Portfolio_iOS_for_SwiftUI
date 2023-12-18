@@ -6,24 +6,65 @@
 //
 import SwiftUI
 struct TextBox: View {
-    @State private var inputText = ""
-    let text: String
-    var width: CGFloat = 240
-    var height: CGFloat = 40
+    @Binding var inputText: String
+    var titleText: String
+    var descriptionText: String = "入力してください"
+    var fieldHide: Bool = false
+    var width: CGFloat = 294
+    var height: CGFloat = 48
+    var lines: ClosedRange = 1...1
+    @FocusState var focus: Bool
+    
+    var isRequired: Bool = false
     
     var body: some View {
         
-        VStack(alignment: .leading) {
-            Text(text)
-                .foregroundColor(Color.text)
-            TextField("入力してください", text: $inputText)
-                .autocapitalization(.none)
-                .frame(width: width, height: height)
-                .padding(.leading, 15)
-                .overlay(RoundedRectangle(cornerRadius: 20)
-                    .stroke(Color.grayBottonColor, lineWidth: 2)
-                )
-                .padding(.leading, 25)
+        if lines == 1...1 { // 単一行のTextField
+            VStack(alignment: .leading) {
+                HStack(spacing:0) {
+                    TextView(text: titleText, textPattern: 0)
+                    if isRequired {
+                        TextView(text: "*", textPattern: 0).foregroundColor(.red)
+                    }
+                }
+
+                if fieldHide {
+                    SecureField(descriptionText, text: $inputText)
+                        .autocapitalization(.none)
+                        .frame(width: width, height: height)
+                        .padding(.leading, 15)
+                        .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.grayBottonColor, lineWidth: 2))
+                        .padding(.leading, 25)
+                } else {
+                    TextField(descriptionText, text: $inputText)
+                        .autocapitalization(.none)
+                        .frame(width: width, height: height)
+                        .padding(.leading, 15)
+                        .overlay(RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.grayBottonColor, lineWidth: 2))
+                        .padding(.leading, 25)
+                }
+            }
+        } else { // 複数行のTextField
+            VStack(alignment: .leading) {
+                HStack(spacing:0) {
+                    TextView(text: titleText, textPattern: 0)
+                    if isRequired {
+                        TextView(text: "*", textPattern: 0).foregroundColor(.red)
+                    }
+                }
+                
+                TextField(descriptionText, text: $inputText, axis: .vertical)
+                    .autocapitalization(.none)
+                    .frame(width: width)
+                    .padding(.top, 10)
+                    .lineLimit(lines)
+                    .padding(.leading, 15)
+                    .overlay(RoundedRectangle(cornerRadius: 15)
+                        .stroke(Color.grayBottonColor, lineWidth: 2))
+                    .padding(.leading, 25)
+            }
         }
     }
 }
@@ -31,11 +72,12 @@ struct TextBox: View {
 //#if DEBUG
 //struct TextBox_Previews: PreviewProvider {
 //    static var previews: some View {
-//        VStack {
-//            TextBox(text: "メールアドレス")
-//            TextBox(text: "メールアドレス", width: 300)
-//            TextBox(text: "メールアドレス", height: 80)
-//            TextBox(text: "メールアドレス", width: 200, height: 200)
+//        VStack(alignment: .leading) {
+//            TextBox(inputText: .constant(""), titleText: "メールアドレス")
+//            TextBox(inputText: .constant(""), titleText: "パスワード", descriptionText: "8文字以上記号必須", fieldHide: true, isRequired: true) //noqa
+//            TextBox(inputText: .constant(""), titleText: "メールアドレス", width: 300)
+//            TextBox(inputText: .constant(""), titleText: "メールアドレス", lines: 6...6, isRequired: true)
+//            TextBox(inputText: .constant(""), titleText: "メールアドレス", width: 200, lines: 5...5)
 //        }
 //    }
 //}
