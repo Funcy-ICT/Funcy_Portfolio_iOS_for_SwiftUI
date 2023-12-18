@@ -9,6 +9,14 @@ import SwiftUI
 
 struct PostView: View {
     @State private var publishing = false
+    
+    @State private var title: String = ""
+    @State private var description: String = ""
+    @State private var githubLink: String = ""
+    @State private var youtubeLink: String = ""
+
+    @FocusState var focus: Bool
+
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -49,10 +57,10 @@ struct PostView: View {
                 .frame(width: 360, height: 1)
                 .background(Color.black)
                 .padding(EdgeInsets(
-                    top: 10,        // 上の余白
-                    leading: 15,    // 左の余白
-                    bottom: 10,     // 下の余白
-                    trailing: 0    // 右の余白
+                    top: 10,
+                    leading: 15,
+                    bottom: 10,
+                    trailing: 0
                 ))
             
             ScrollView {
@@ -68,18 +76,18 @@ struct PostView: View {
                         .frame(width: 100, alignment: .leading)
                         .padding(.leading, 35)
                     Spacer()
+                    // 上記は、.leadingの指定を受け付けてくれないのでこのような実装に
                 }
-                // 上記は、.leadingの指定を受け付けてくれないのでこのような実装に
-                TextBox(text: "タイトル", width: 300)
+                TextBox(inputText: $title, titleText: "タイトル", width: 300, isRequired: true)
                     .padding(20)
-                TextBox(text: "説明文", width: 300, height: 200)
+                TextBox(inputText: $description, titleText: "説明文", lines: 6...6)
                     .padding(20)
-                TextBox(text: "Githubリンク", width: 300)
+                TextBox(inputText: $githubLink, titleText: "Githubリンク", width: 300)
                     .padding(20)
-                TextBox(text: "Youtubeリンク", width: 300)
+                TextBox(inputText: $youtubeLink, titleText: "Youtubeリンク", width: 300)
                     .padding(20)
                 // tagのviewはここに
-                let item = ["おはよう","こんにちは","さようなら"]
+                let item = ["おはよう", "こんにちは", "さようなら"]
                
                 HStack {
                     Text("タグの追加")
@@ -90,6 +98,17 @@ struct PostView: View {
                 TagView(item: item, viewPattern: .detail)
                 // 写真追加も
                 
+            }
+            .focused(self.$focus)
+            .toolbar {
+                ToolbarItem(placement: .keyboard) {
+                    HStack {
+                        Spacer()
+                        Button("完了") {
+                            self.focus = false
+                        }
+                    }
+                }
             }
         }
     }
